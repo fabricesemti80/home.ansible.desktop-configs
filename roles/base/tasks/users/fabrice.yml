@@ -15,14 +15,14 @@
     password: "{{ fabrice_passwd }}"
     shell: /bin/bash
 
-# - name: users | fabrice | fabrice | add sudoers file
-#   tags: fabrice,settings,simone,sudo,system,users
-#   copy:
-#     src: users/sudoers_fabrice
-#     dest: /etc/sudoers.d/fabrice
-#     owner: root
-#     group: root
-#     mode: 0440
+- name: users | fabrice | fabrice | add sudoers file
+  tags: fabrice,settings,sudo,system,users
+  copy:
+    src: users/sudoers_fabrice
+    dest: /etc/sudoers.d/fabrice
+    owner: root
+    group: root
+    mode: 0440
 
 - name: users | fabrice | create .ssh directory
   tags: dotfiles,fabrice,ssh,users
