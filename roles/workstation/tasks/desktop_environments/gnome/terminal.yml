@@ -1,9 +1,9 @@
-- name: gnome | terminal | disable terminal menubar
+- name: gnome | terminal | enable terminal menubar
   tags: gnome,gnome-terminal
   become_user: fabrice
   dconf:
     key: "/org/gnome/terminal/legacy/default-show-menubar"
-    value: "false"
+    value: "true"
 
 - name: gnome | terminal | set terminal configuration
   tags: gnome,gnome-terminal

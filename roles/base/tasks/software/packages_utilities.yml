@@ -3,34 +3,35 @@
   package:
     state: latest
     name:
-      - at
-      - colordiff
+      - at                        # https://linuxize.com/post/at-command-in-linux/
+      - colordiff                 # https://www.colordiff.org/
       - curl
       - "{{ dns_utils_package}}"
       - htop
       - iotop
       - "{{ lm_sensors_package }}"
       - lsof
-      - mc
-      - mosh
+      - mc                         # https://midnight-commander.org/
+      - mosh                       # https://github.com/mobile-shell/mosh
       - ncdu
       - neofetch
       - net-tools
       - "{{ nfs_client_package }}"
+      - nano
       - nmap
-      - ranger
+      - openssh-server
+      - ranger                      # https://github.com/ranger/ranger
       - "{{ rename_package }}"
       - rsync
       - screen
       - sshfs
-      - tmux
+      - tmux                         # https://github.com/tmux/tmux/wiki
       - traceroute
       - "{{ vim_package }}"
       - wget
       - whois
       - zsh
-      - nano
-      - openssh-server
+
 
 - name: system setup | utilities | install man-pages (arch)
   tags: packages,system,settings
