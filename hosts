@@ -1,5 +1,5 @@
 [server]
-rundeck-0.home.lan
+rundeck-0
 
 [workstation]
-dev-1.home.lan
+dev-1
