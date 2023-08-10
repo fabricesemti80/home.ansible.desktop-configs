@@ -1,3 +1,9 @@
+- name: groups | ansible | create group
+  tags: groups,ansible,ansible-setup
+  group:
+    name: ansible
+    state: present
+
 - name: ansible setup | ensure ansible is the latest version
   tags: ansible,ansible-setup
   package:
