@@ -11,7 +11,7 @@
     group: fabrice
     groups: adm,ansible,{{ sudo_group }}
     state: present
-    comment: "fabrice LaCroix"
+    comment: "fabrice semti"
     password: "{{ fabrice_passwd }}"
     shell: /bin/bash
 
