@@ -42,7 +42,7 @@ case :$PATH: in
 esac
 
 # Enable tab completion for tmux
-source /home/jay/.tmux/plugins/completion/tmux
+source /home/fabrice/.tmux/plugins/completion/tmux
 
 # Add /home/$USER/.tmux/tmuxifier to $PATH
 case :$PATH: in

@@ -1,12 +1,12 @@
 ---
-branch: master
+branch: main
 
 ansible_cron_minute: "40"
 ssh_port: 22
-ssh_users: "user1 user2"
+ssh_users: "fabrice"
 
 # platform-specific
-linode_instance: true
+linode_instance: false
 microcode_amd_install: false
 microcode_intel_install: false
 proxmox_instance: false

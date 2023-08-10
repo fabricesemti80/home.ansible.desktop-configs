@@ -9,14 +9,14 @@
 
 - name: update_tmux_plugin_perms
   file:
-    path: /home/jay/.tmux/plugins
-    owner: jay
-    group: jay
+    path: /home/fabrice/.tmux/plugins
+    owner: fabrice
+    group: fabrice
     recurse: true
 
 - name: update_vim_bundle_perms
   file:
-    path: /home/jay/.vim/bundle
-    owner: jay
-    group: jay
+    path: /home/fabrice/.vim/bundle
+    owner: fabrice
+    group: fabrice
     recurse: true

@@ -91,8 +91,8 @@ set -g visual-activity on
 
 
 # Plugins
-run-shell /home/jay/.tmux/plugins/continuum/continuum.tmux
-run-shell /home/jay/.tmux/plugins/resurrect/resurrect.tmux
+run-shell /home/fabrice/.tmux/plugins/continuum/continuum.tmux
+run-shell /home/fabrice/.tmux/plugins/resurrect/resurrect.tmux
 set -g @continuum-restore 'on'
 set -g @continuum-boot 'on'
 

@@ -4,7 +4,7 @@
 
 - block:
   ## User configs
-  - import_tasks: users/jay.yml
+  - import_tasks: users/fabrice.yml
 
 ## desktop environments
 

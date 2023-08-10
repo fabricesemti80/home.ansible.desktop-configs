@@ -1,2 +1,4 @@
-jay_passwd: password-hash-goes-here
+fabrice_passwd: $6$h4qEbaJ/sOVPtk3S$cR.7zGSpMhH0ZCsMjAkGo7H81.GamDxw8zqwEh0VL597MGCbm6TWkMglZZ2w50zSrN0uIGOeDnGMIiVGncjUr1
 swappiness_value: 5
+
+# echo -n "<password>" | openssl passwd -6 -stdin

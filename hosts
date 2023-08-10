@@ -1,9 +1,5 @@
 [server]
-server1.mydomain.com
-server2.mydomain.com
-server3.mydomain.com
+rundeck-0.home.lan
 
 [workstation]
-workstation1.mydomain.com
-workstation2.mydomain.com
-workstation3.mydomain.com
+dev-1.home.lan

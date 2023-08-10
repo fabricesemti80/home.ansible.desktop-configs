@@ -12,7 +12,7 @@ gstreamer_libav_package: gstreamer1.0-libav
 gstreamer_plugins_bad_package: gstreamer1.0-plugins-bad
 hunspell_package: hunspell-en-us
 hyphen_package: hyphen-en-us
-jay_user_group: jay
+fabrice_user_group: fabrice
 libnotify_package: libnotify-bin
 mpv_package: gnome-mpv
 nethack_package: nethack-console

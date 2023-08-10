@@ -18,15 +18,15 @@
     name: acl
   when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
 
-- name: ansible setup | create ansible log file
-  tags: ansible,ansible-setup
-  file:
-    path: /var/log/ansible.log
-    owner: simone
-    group: ansible
-    mode: 0664
-    state: touch
-  changed_when: False
+# - name: ansible setup | create ansible log file
+#   tags: ansible,ansible-setup
+#   file:
+#     path: /var/log/ansible.log
+#     owner: simone
+#     group: ansible
+#     mode: 0664
+#     state: touch
+#   changed_when: False
 
 - name: ansible setup | add logrotate config for ansible log file
   tags: ansible-setup
