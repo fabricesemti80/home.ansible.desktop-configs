@@ -3,13 +3,14 @@
   tags: always
 
 - block:
+
+  # Set up the ansible environment
+  - import_tasks: ansible_setup.yml
+
   # Make sure users exist on the system
   - import_tasks: users/fabrice.yml
   - import_tasks: users/root.yml
   # - import_tasks: users/simone.yml
-
-  # Set up the ansible environment
-  - import_tasks: ansible_setup.yml
 
   # install software
   - import_tasks: software/repositories.yml
