@@ -29,6 +29,8 @@
       - wget
       - whois
       - zsh
+      - nano
+      - openssh-server
 
 - name: system setup | utilities | install man-pages (arch)
   tags: packages,system,settings
