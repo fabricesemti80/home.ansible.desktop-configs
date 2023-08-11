@@ -43,48 +43,48 @@
   with_file:
     - users/fabrice/ssh/fabrice_id_ed25519.pub
 
-- name: users | fabrice | create config directories
-  tags: dotfiles,fabrice,tmux,users,vim,zsh
-  file:
-    path: /home/fabrice/{{ item.dir }}
-    state: directory
-    owner: fabrice
-    group: fabrice
-    mode: 0700
-  with_items:
-    - { dir: '.bash' }
-    - { dir: '.config' }
-    - { dir: '.config/htop' }
-    - { dir: '.config/mc' }
-    - { dir: '.tmux' }
-    - { dir: '.tmux/config' }
-    - { dir: '.tmux/plugins' }
-    - { dir: '.vim' }
-    - { dir: '.vim/autoload' }
-    - { dir: '.vim/bundle' }
-    - { dir: '.vim/colors' }
-    - { dir: '.vim/ftplugin' }
-    - { dir: '.zsh' }
+# - name: users | fabrice | create config directories #TODO: might be needed later
+#   tags: dotfiles,fabrice,tmux,users,vim,zsh
+#   file:
+#     path: /home/fabrice/{{ item.dir }}
+#     state: directory
+#     owner: fabrice
+#     group: fabrice
+#     mode: 0700
+#   with_items:
+#     - { dir: '.bash' }
+#     - { dir: '.config' }
+#     - { dir: '.config/htop' }
+#     - { dir: '.config/mc' }
+#     - { dir: '.tmux' }
+#     - { dir: '.tmux/config' }
+#     - { dir: '.tmux/plugins' }
+#     - { dir: '.vim' }
+#     - { dir: '.vim/autoload' }
+#     - { dir: '.vim/bundle' }
+#     - { dir: '.vim/colors' }
+#     - { dir: '.vim/ftplugin' }
+#     - { dir: '.zsh' }
 
-- name: users | fabrice | copy tmux config (server version)
-  tags: dotfiles,users,fabrice,tmux,users,vim,zsh
-  copy:
-    src: users/fabrice/tmux/tmux.conf.server
-    dest: /home/fabrice/.tmux.conf
-    owner: fabrice
-    group: fabrice
-    mode: 0600
-  when: "'server' not in group_names"
+# - name: users | fabrice | copy tmux config (server version) #TODO: might be needed later - TMUX
+#   tags: dotfiles,users,fabrice,tmux,users,vim,zsh
+#   copy:
+#     src: users/fabrice/tmux/tmux.conf.server
+#     dest: /home/fabrice/.tmux.conf
+#     owner: fabrice
+#     group: fabrice
+#     mode: 0600
+#   when: "'server' not in group_names"
 
-- name: users | fabrice | copy tmux config (workstation version)
-  tags: dotfiles,users,fabrice,tmux,users,vim,zsh
-  copy:
-    src: users/fabrice/tmux/tmux.conf.workstation
-    dest: /home/fabrice/.tmux.conf
-    owner: fabrice
-    group: fabrice
-    mode: 0600
-  when: "'server' in group_names"
+# - name: users | fabrice | copy tmux config (workstation version) #TODO: might be needed later -TMUX
+#   tags: dotfiles,users,fabrice,tmux,users,vim,zsh
+#   copy:
+#     src: users/fabrice/tmux/tmux.conf.workstation
+#     dest: /home/fabrice/.tmux.conf
+#     owner: fabrice
+#     group: fabrice
+#     mode: 0600
+#   when: "'server' in group_names"
 
 - name: users | fabrice | copy dotfiles
   tags: dotfiles,users,fabrice,tmux,users,vim,zsh
@@ -106,31 +106,31 @@
     - { src: 'inputrc', dest: '.inputrc' }
     - { src: 'mc/mc.ini', dest: '.config/mc/ini' }
     - { src: 'vim/vimrc', dest: '.vimrc' }
-    - { src: 'zsh/zshrc', dest: '.zshrc' }
+    - { src: 'zsh/zshrc', dest: '.zshrc' } #TODO: review these configs
 
-- name: users | fabrice | clone tmux-completion plugin repository
-  tags: dotfiles,fabrice,users,tmux
-  git:
-    repo: https://github.com/srsudar/tmux-completion.git
-    dest: /home/fabrice/.tmux/plugins/completion
-    force: yes
-  notify: update_tmux_plugin_perms
+# - name: users | fabrice | clone tmux-completion plugin repository #TODO: might be needed - TMUX
+#   tags: dotfiles,fabrice,users,tmux
+#   git:
+#     repo: https://github.com/srsudar/tmux-completion.git
+#     dest: /home/fabrice/.tmux/plugins/completion
+#     force: yes
+#   notify: update_tmux_plugin_perms
 
-- name: users | fabrice | clone tmux-continuum plugin repository
-  tags: dotfiles,fabrice,users,tmux
-  git:
-    repo: https://github.com/tmux-plugins/tmux-continuum
-    dest: /home/fabrice/.tmux/plugins/continuum
-    force: yes
-  notify: update_tmux_plugin_perms
+# - name: users | fabrice | clone tmux-continuum plugin repository #TODO: might be needed -TMUX
+#   tags: dotfiles,fabrice,users,tmux
+#   git:
+#     repo: https://github.com/tmux-plugins/tmux-continuum
+#     dest: /home/fabrice/.tmux/plugins/continuum
+#     force: yes
+#   notify: update_tmux_plugin_perms
 
-- name: users | fabrice | clone tmux-resurrect plugin repository
-  tags: dotfiles,fabrice,users,tmux
-  git:
-    repo: https://github.com/tmux-plugins/tmux-resurrect
-    dest: /home/fabrice/.tmux/plugins/resurrect
-    force: yes
-  notify: update_tmux_plugin_perms
+# - name: users | fabrice | clone tmux-resurrect plugin repository  #TODO: might be needed -TMUX
+#   tags: dotfiles,fabrice,users,tmux
+#   git:
+#     repo: https://github.com/tmux-plugins/tmux-resurrect
+#     dest: /home/fabrice/.tmux/plugins/resurrect
+#     force: yes
+#   notify: update_tmux_plugin_perms
 
 - name: users | fabrice | copy individual zsh config files
   tags: dotfiles,fabrice,users,zsh
@@ -153,64 +153,64 @@
     - { src: 'setopt.zsh' }
     - { src: 'theming.zsh' }
 
-- name: users | fabrice | copy vim ftype files
-  tags: dotfiles,fabrice,users,vim
-  copy:
-    src: users/fabrice/vim/{{ item.src }}
-    dest: /home/fabrice/.vim/ftplugin/{{ item.src }}
-    owner: fabrice
-    group: fabrice
-    mode: 0600
-  with_items:
-    - { src: 'cmake.vim' }
-    - { src: 'cpp.vim' }
-    - { src: 'html.vim' }
-    - { src: 'perl.vim' }
-    - { src: 'python.vim' }
-    - { src: 'ruby.vim' }
-    - { src: 'sql.vim' }
-    - { src: 'xml.vim' }
+# - name: users | fabrice | copy vim ftype files  #TODO: might be needed -VIM
+#   tags: dotfiles,fabrice,users,vim
+#   copy:
+#     src: users/fabrice/vim/{{ item.src }}
+#     dest: /home/fabrice/.vim/ftplugin/{{ item.src }}
+#     owner: fabrice
+#     group: fabrice
+#     mode: 0600
+#   with_items:
+#     - { src: 'cmake.vim' }
+#     - { src: 'cpp.vim' }
+#     - { src: 'html.vim' }
+#     - { src: 'perl.vim' }
+#     - { src: 'python.vim' }
+#     - { src: 'ruby.vim' }
+#     - { src: 'sql.vim' }
+#     - { src: 'xml.vim' }
 
-- name: users | fabrice | copy vim color files
-  tags: dotfiles,fabrice,users,vim
-  copy:
-    src: users/fabrice/vim/{{ item.src }}
-    dest: /home/fabrice/.vim/colors/{{ item.src }}
-    owner: fabrice
-    group: fabrice
-    mode: 0600
-  with_items:
-    - { src: 'bubblegum-256-dark.vim' }
-    - { src: 'darktango.vim' }
-    - { src: 'jellybeans.vim' }
-    - { src: 'xoria256.vim' }
-    - { src: 'zenburn.vim' }
+# - name: users | fabrice | copy vim color files  #TODO: might be needed -VIM
+#   tags: dotfiles,fabrice,users,vim
+#   copy:
+#     src: users/fabrice/vim/{{ item.src }}
+#     dest: /home/fabrice/.vim/colors/{{ item.src }}
+#     owner: fabrice
+#     group: fabrice
+#     mode: 0600
+#   with_items:
+#     - { src: 'bubblegum-256-dark.vim' }
+#     - { src: 'darktango.vim' }
+#     - { src: 'jellybeans.vim' }
+#     - { src: 'xoria256.vim' }
+#     - { src: 'zenburn.vim' }
 
-- name: users | fabrice | install pathogen
-  tags: dotfiles,fabrice,users,vim
-  copy:
-    src: users/fabrice/vim/{{ item.src }}
-    dest: "{{ item.dest }}"
-    owner: fabrice
-    group: fabrice
-    mode: 0700
-  with_items:
-    - { src: 'pathogen.vim', dest: '/home/fabrice/.vim/autoload/pathogen.vim' }
+# - name: users | fabrice | install pathogen  #TODO: might be needed -VIM
+#   tags: dotfiles,fabrice,users,vim
+#   copy:
+#     src: users/fabrice/vim/{{ item.src }}
+#     dest: "{{ item.dest }}"
+#     owner: fabrice
+#     group: fabrice
+#     mode: 0700
+#   with_items:
+#     - { src: 'pathogen.vim', dest: '/home/fabrice/.vim/autoload/pathogen.vim' }
 
-- name: users | fabrice | checkout git repositories
-  tags: git,users,fabrice
-  become: yes
-  git:
-    repo: "{{ item.repo }}"
-    dest: "{{ item.dest }}"
-    force: yes
-  with_items:
-    - { repo: 'https://github.com/ctrlpvim/ctrlp.vim.git', dest: '/home/fabrice/.vim/bundle/ctrlp.vim' }
-    - { repo: 'https://github.com/davidhalter/jedi-vim.git', dest: '/home/fabrice/.vim/bundle/jedi-vim' }
-    - { repo: 'https://github.com/pearofducks/ansible-vim', dest: '/home/fabrice/.vim/bundle/ansible-vim' }
-    - { repo: 'https://github.com/rhysd/vim-grammarous.git', dest: '/home/fabrice/.vim/bundle/vim-grammarous' }
-    - { repo: 'https://github.com/ron89/thesaurus_query.vim', dest: '/home/fabrice/.vim/bundle/thesaurus_query' }
-    - { repo: 'https://github.com/scrooloose/nerdtree.git', dest: '/home/fabrice/.vim/bundle/nerdtree' }
-    - { repo: 'https://github.com/tpope/vim-obsession.git', dest: '/home/fabrice/.vim/bundle/vim-obsession' }
-    - { repo: 'https://github.com/vim-syntastic/syntastic.git', dest: '/home/fabrice/.vim/bundle/syntastic' }
-  notify: update_vim_bundle_perms
+# - name: users | fabrice | checkout git repositories #TODO: might be needed -VIM
+#   tags: git,users,fabrice
+#   become: yes
+#   git:
+#     repo: "{{ item.repo }}"
+#     dest: "{{ item.dest }}"
+#     force: yes
+#   with_items:
+#     - { repo: 'https://github.com/ctrlpvim/ctrlp.vim.git', dest: '/home/fabrice/.vim/bundle/ctrlp.vim' }
+#     - { repo: 'https://github.com/davidhalter/jedi-vim.git', dest: '/home/fabrice/.vim/bundle/jedi-vim' }
+#     - { repo: 'https://github.com/pearofducks/ansible-vim', dest: '/home/fabrice/.vim/bundle/ansible-vim' }
+#     - { repo: 'https://github.com/rhysd/vim-grammarous.git', dest: '/home/fabrice/.vim/bundle/vim-grammarous' }
+#     - { repo: 'https://github.com/ron89/thesaurus_query.vim', dest: '/home/fabrice/.vim/bundle/thesaurus_query' }
+#     - { repo: 'https://github.com/scrooloose/nerdtree.git', dest: '/home/fabrice/.vim/bundle/nerdtree' }
+#     - { repo: 'https://github.com/tpope/vim-obsession.git', dest: '/home/fabrice/.vim/bundle/vim-obsession' }
+#     - { repo: 'https://github.com/vim-syntastic/syntastic.git', dest: '/home/fabrice/.vim/bundle/syntastic' }
+#   notify: update_vim_bundle_perms

@@ -22,17 +22,17 @@
   roles:
     - base
 
-- hosts: workstation
-  tags: workstation
-  become: true
-  roles:
-    - workstation
+# - hosts: workstation
+#   tags: workstation
+#   become: true
+#   roles:
+#     - workstation
 
-- hosts: server
-  tags: server
-  become: true
-  roles:
-    - server
+# - hosts: server
+#   tags: server
+#   become: true
+#   roles:
+#     - server
 
 # end of run cleanup and reporting
 - hosts: all

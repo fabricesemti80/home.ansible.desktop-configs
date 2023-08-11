@@ -13,19 +13,19 @@
     enabled: true
   when: ansible_distribution == "Archlinux"
 
-# - name: system setup | cron | schedule automatic ansible provisioning
-#   tags: cron
-#   cron:
-#     name: "ansible provision"
-#     user: simone
-#     hour: "{{ ansible_cron_hour | default('*') }}"
-#     minute: "{{ ansible_cron_minute | default('*/30') }}"
-#     job: "/usr/local/bin/provision > /dev/null"
+- name: system setup | cron | schedule automatic ansible provisioning #TODO: review this task (original user was "simone")
+  tags: cron
+  cron:
+    name: "ansible provision"
+    user: fabrice
+    hour: "{{ ansible_cron_hour | default('*') }}"
+    minute: "{{ ansible_cron_minute | default('*/30') }}"
+    job: "/usr/local/bin/provision > /dev/null"
 
-- name: system setup | cron | schedule ansible cleanup at boot
+- name: system setup | cron | schedule ansible cleanup at boot #TODO: review this task (original user was "simone")
   tags: cron
   cron:
     name: "ansible refresh at boot"
-    user: simone
+    user: fabrice
     special_time: reboot
-    job: "/bin/rm -rf /home/simone/.ansible"
+    job: "/bin/rm -rf /home/fabrice/.ansible"

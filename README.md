@@ -40,10 +40,9 @@ The folder structure breaks down like this:
 After it's run for the first time manually, this Ansible config creates its own Cronjob for itself on that machine so you never have to run it manually again going forward, and it will track all future commits and run them against all your machines as soon as you commit a change. You can find the playbook for Cron in the base role.
 
 ## How do I run it?
-You don't, you use this to build your own. Go through my Ansible desktop tutorial that launches on December 11th to build your "skeleton", then use this repo for syntax reference. If you insist on running this, you run it with the following command after installing Ansible:
 
 ```sh
 # -U: the https url of the repo
-# -C: needed only if using certain branhc (else omit)
+# -C: needed only if using certain branhc (omit, if using the branch defined in the config)
 sudo ansible-pull -U https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.git -C fabrice
 ```

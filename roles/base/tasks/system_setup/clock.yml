@@ -24,4 +24,4 @@
 - name: system setup | clock | set time zone
   tags: ntp,timezone,system setup
   timezone:
-    name: "Europe/London"
+    name: "{{ timezone }}" #TODO: review this variable placement

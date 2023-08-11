@@ -18,7 +18,7 @@
     name: earlyoom
     state: latest
 
-- name: system setup | memory | enable and start earlyoom
+- name: system setup | memory | enable and start earlyoom #TODO: note this to README.md --> https://github.com/rfjakob/earlyoom
   tags: earlyoom,packages,system,setup
   service:
     name: earlyoom
