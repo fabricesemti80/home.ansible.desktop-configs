@@ -7,16 +7,16 @@
     name: "{{ openssh_service }}"
     state: restarted
 
-# - name: update_tmux_plugin_perms #TODO: might be needed - TMUX
-#   file:
-#     path: /home/fabrice/.tmux/plugins
-#     owner: fabrice
-#     group: fabrice
-#     recurse: true
+- name: update_tmux_plugin_perms
+  file:
+    path: /home/fabrice/.tmux/plugins
+    owner: fabrice
+    group: fabrice
+    recurse: true
 
-# - name: update_vim_bundle_perms #TODO: might be needed - VIM
-#   file:
-#     path: /home/fabrice/.vim/bundle
-#     owner: fabrice
-#     group: fabrice
-#     recurse: true
+- name: update_vim_bundle_perms
+  file:
+    path: /home/fabrice/.vim/bundle
+    owner: fabrice
+    group: fabrice
+    recurse: true
