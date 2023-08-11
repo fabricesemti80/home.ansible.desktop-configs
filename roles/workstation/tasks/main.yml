@@ -1,10 +1,7 @@
 # Load distro-specific variables
 - include_vars:
-    files:
-      - "{{ ansible_distribution }}.yml"
-      - common.yml
+  - ["{{ ansible_distribution }}.yml"]
   tags: always
-
 
 # - block:
 #   ## User configs
