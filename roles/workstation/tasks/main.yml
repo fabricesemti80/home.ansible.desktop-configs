@@ -12,8 +12,8 @@
 
 # ## desktop environments
 
-#   - include_tasks: desktop_environments/mate/appearance.yml
-#     when: mate is defined and mate == true
+  # - include_tasks: desktop_environments/mate/appearance.yml
+  #   when: mate is defined and mate == true
 
 #   - include_tasks: desktop_environments/mate/caja.yml
 #     when: mate is defined and mate == true
@@ -33,8 +33,8 @@
 #   - include_tasks: desktop_environments/mate/workspace_settings.yml
 #     when: mate is defined and mate == true
 
-#   - include_tasks: desktop_environments/gnome/appearance.yml
-#     when: gnome is defined and gnome == true
+  - include_tasks: desktop_environments/gnome/appearance.yml
+    when: gnome is defined and gnome == true
 
 #   - include_tasks: desktop_environments/gnome/keybindings.yml
 #     when: gnome is defined and gnome == true
