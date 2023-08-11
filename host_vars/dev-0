@@ -16,34 +16,34 @@ terminal_emulator: terminator
 web_browser: flatpak run org.mozilla.firefox
 
 # application selection
-audacity: true
+audacity: false       #todo: remove residuals
 authy: true
-autofs: true
-chromium: true
-darktable: true
+autofs: false         #todo: remove residuals
+chromium: false       #todo: remove residuals
+darktable: false      #todo: remove residuals
 firefox: true
 foliate: true
-games: true
+games: false          #todo: remove residuals
 glimpse: true
-keepassxc: true
-libreoffice: true
-lutris: true
-mattermost: true
-minecraft: true
+keepassxc: false      #todo: remove residuals
+libreoffice: false    #todo: remove residuals
+lutris: false         #todo: remove residuals
+mattermost: false     #todo: remove residuals
+minecraft: false      #todo: remove residuals
 packer: true
-signal: true
-spotify: true
-steam: true
+signal: false         #todo: remove residuals
+spotify: false        #! review
+steam: false          #! review
 syncthing: true
 terraform: true
 thunderbird: true
-todoist: true
-ulauncher: false
+todoist: false        #todo: remove residuals
+ulauncher: false      # https://ulauncher.io/
 vagrant: true
 virtualbox: true
-vivaldi: true
+vivaldi: false        #todo: remove residuals
 vlc: true
-xonotic: true
+xonotic: false        #todo: remove residuals
 
 # desktop environment selection
 gnome: true
