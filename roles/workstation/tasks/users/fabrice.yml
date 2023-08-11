@@ -56,12 +56,9 @@
     group: fabrice
     mode: 0600
   with_items:
-    - { src: 'asunder', dest: '.asunder' }
     - { src: 'bpytop.conf', dest: '.config/bpytop/bpytop.conf' }
     - { src: 'directory_bookmarks', dest: '.config/gtk-3.0/bookmarks' }
     - { src: 'gvimrc', dest: '.gvimrc' }
-    - { src: 'linode-cli', dest: '.config/linode-cli' }
-    - { src: 'mimeapps.list', dest: '.config/mimeapps.list' }
     - { src: 'ssh_client_config', dest: '.ssh/config' }
     - { src: 'terminator_config', dest: '.config/terminator/config' }
 

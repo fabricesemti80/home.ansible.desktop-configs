@@ -176,45 +176,45 @@
     - proxmox_instance is defined and proxmox_instance == true or
       raspberry_pi is defined and raspberry_pi == true
 
-- name: ufw | nrpe | allow nrpe (external)
-  tags: ufw
-  ufw:
-    comment: nrpe
-    rule: allow
-    port: '5666'
-    src: 172.14.56.123/32
-  when:
-    - linode_instance is defined
-    - linode_instance == true
+# - name: ufw | nrpe | allow nrpe (external)
+#   tags: ufw
+#   ufw:
+#     comment: nrpe
+#     rule: allow
+#     port: '5666'
+#     src: 172.14.56.123/32
+#   when:
+#     - linode_instance is defined
+#     - linode_instance == true
 
 # openssh
-- name: ufw | openssh | allow ssh (external)
-  tags: ufw
-  ufw:
-    comment: ssh from home network
-    rule: allow
-    port: ssh
-    src: 172.14.59.123/32
-  when:
-    - linode_instance is defined
-    - linode_instance == true
+# - name: ufw | openssh | allow ssh (external)
+#   tags: ufw
+#   ufw:
+#     comment: ssh from home network
+#     rule: allow
+#     port: ssh
+#     src: 172.14.59.123/32
+#   when:
+#     - linode_instance is defined
+#     - linode_instance == true
 
-- name: ufw | openssh | allow ssh (internal)
-  tags: ufw
-  ufw:
-    comment: ssh
-    rule: allow
-    port: ssh
-    src: '{{ item }}'
-  loop:
-    - 10.10.10.10/24
-    - 172.16.248.0/24
-    - 172.16.249.0/24
-    - 172.16.250.0/24
-    - 172.16.251.0/24
-  when:
-    - linode_instance is defined
-    - linode_instance == false
+# - name: ufw | openssh | allow ssh (internal)
+#   tags: ufw
+#   ufw:
+#     comment: ssh
+#     rule: allow
+#     port: ssh
+#     src: '{{ item }}'
+#   loop:
+#     - 10.10.10.10/24
+#     - 172.16.248.0/24
+#     - 172.16.249.0/24
+#     - 172.16.250.0/24
+#     - 172.16.251.0/24
+#   when:
+#     - linode_instance is defined
+#     - linode_instance == false
 
 # plex
 - name: ufw | plex | allow plex
