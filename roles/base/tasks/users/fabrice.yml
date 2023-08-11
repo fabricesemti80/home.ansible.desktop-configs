@@ -43,28 +43,28 @@
   with_file:
     - users/fabrice/ssh/fabrice_id_ed25519.pub
 
-# - name: users | fabrice | create config directories #TODO: might be needed later
-#   tags: dotfiles,fabrice,tmux,users,vim,zsh
-#   file:
-#     path: /home/fabrice/{{ item.dir }}
-#     state: directory
-#     owner: fabrice
-#     group: fabrice
-#     mode: 0700
-#   with_items:
-#     - { dir: '.bash' }
-#     - { dir: '.config' }
-#     - { dir: '.config/htop' }
-#     - { dir: '.config/mc' }
-#     - { dir: '.tmux' }
-#     - { dir: '.tmux/config' }
-#     - { dir: '.tmux/plugins' }
-#     - { dir: '.vim' }
-#     - { dir: '.vim/autoload' }
-#     - { dir: '.vim/bundle' }
-#     - { dir: '.vim/colors' }
-#     - { dir: '.vim/ftplugin' }
-#     - { dir: '.zsh' }
+- name: users | fabrice | create config directories #TODO: might be needed later
+  tags: dotfiles,fabrice,tmux,users,vim,zsh
+  file:
+    path: /home/fabrice/{{ item.dir }}
+    state: directory
+    owner: fabrice
+    group: fabrice
+    mode: 0700
+  with_items:
+    - { dir: '.bash' }
+    - { dir: '.config' }
+    - { dir: '.config/htop' }
+    - { dir: '.config/mc' }
+    # - { dir: '.tmux' }
+    # - { dir: '.tmux/config' }
+    # - { dir: '.tmux/plugins' }
+    # - { dir: '.vim' }
+    # - { dir: '.vim/autoload' }
+    # - { dir: '.vim/bundle' }
+    # - { dir: '.vim/colors' }
+    # - { dir: '.vim/ftplugin' }
+    - { dir: '.zsh' }
 
 # - name: users | fabrice | copy tmux config (server version) #TODO: might be needed later - TMUX
 #   tags: dotfiles,users,fabrice,tmux,users,vim,zsh
