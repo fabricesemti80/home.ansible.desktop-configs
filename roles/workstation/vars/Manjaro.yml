@@ -21,11 +21,8 @@ network_manager_package: networkmanager
 network_manager_pptp_package: networkmanager-pptp
 network_manager_vpnc_package: networkmanager-vpnc
 p7zip_package: p7zip
-packer_version: 1.6.5
 ssh_askpass_package: x11-ssh-askpass
 steam_package: steam-manjaro
-terraform_version: 0.13.5
-vagrant_version: 2.2.14
 virtualbox_package: virtualbox
 wireless_tools_package: wireless_tools
 wpa_supplicant_package: wpa_supplicant

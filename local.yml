@@ -22,11 +22,11 @@
   roles:
     - base
 
-# - hosts: workstation
-#   tags: workstation
-#   become: true
-#   roles:
-#     - workstation
+- hosts: workstation
+  tags: workstation
+  become: true
+  roles:
+    - workstation
 
 # - hosts: server
 #   tags: server

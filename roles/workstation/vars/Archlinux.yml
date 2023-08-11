@@ -1,6 +1,6 @@
 autofs_master_config: /etc/autofs/auto.master
-autofs_nfs_config: /etc/autofs/auto.nfs
-cryptsetup_package: cryptsetup
+# autofs_nfs_config: /etc/autofs/auto.nfs      #todo: might be usefull, to review
+cryptsetup_package: cryptsetup                 #todo: review -> https://gitlab.com/cryptsetup/cryptsetup
 cups_package: cups
 font_fira_mono_package: otf-fira-mono
 font_hack_ttf_package: ttf-hack
@@ -21,11 +21,8 @@ network_manager_package: networkmanager
 network_manager_pptp_package: networkmanager-pptp
 network_manager_vpnc_package: networkmanager-vpnc
 p7zip_package: p7zip
-packer_version: 1.6.5
 ssh_askpass_package: x11-ssh-askpass
 steam_package: steam
-terraform_version: 0.13.5
-vagrant_version: 2.2.14
 virtualbox_package: virtualbox
 wireless_tools_package: wireless_tools
 wpa_supplicant_package: wpa_supplicant
