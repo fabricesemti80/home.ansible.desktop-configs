@@ -1,5 +1,6 @@
 export TERM=xterm-256color
-export EDITOR="/usr/bin/vim"
+# export EDITOR="/usr/bin/vim"
+export EDITOR="/bin/nano"
 export GREP_COLOR='3;33'
 
 # Not all servers have terminfo for rxvt-256color. :<
