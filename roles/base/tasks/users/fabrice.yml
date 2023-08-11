@@ -56,9 +56,9 @@
     - { dir: '.config' }
     - { dir: '.config/htop' }
     - { dir: '.config/mc' }
-    # - { dir: '.tmux' }
-    # - { dir: '.tmux/config' }
-    # - { dir: '.tmux/plugins' }
+    - { dir: '.tmux' }
+    - { dir: '.tmux/config' }
+    - { dir: '.tmux/plugins' }
     # - { dir: '.vim' }
     # - { dir: '.vim/autoload' }
     # - { dir: '.vim/bundle' }
@@ -66,25 +66,25 @@
     # - { dir: '.vim/ftplugin' }
     - { dir: '.zsh' }
 
-# - name: users | fabrice | copy tmux config (server version) #TODO: might be needed later - TMUX
-#   tags: dotfiles,users,fabrice,tmux,users,vim,zsh
-#   copy:
-#     src: users/fabrice/tmux/tmux.conf.server
-#     dest: /home/fabrice/.tmux.conf
-#     owner: fabrice
-#     group: fabrice
-#     mode: 0600
-#   when: "'server' not in group_names"
+- name: users | fabrice | copy tmux config (server version)
+  tags: dotfiles,users,fabrice,tmux,users,vim,zsh
+  copy:
+    src: users/fabrice/tmux/tmux.conf.server
+    dest: /home/fabrice/.tmux.conf
+    owner: fabrice
+    group: fabrice
+    mode: 0600
+  when: "'server' not in group_names"
 
-# - name: users | fabrice | copy tmux config (workstation version) #TODO: might be needed later -TMUX
-#   tags: dotfiles,users,fabrice,tmux,users,vim,zsh
-#   copy:
-#     src: users/fabrice/tmux/tmux.conf.workstation
-#     dest: /home/fabrice/.tmux.conf
-#     owner: fabrice
-#     group: fabrice
-#     mode: 0600
-#   when: "'server' in group_names"
+- name: users | fabrice | copy tmux config (workstation version)
+  tags: dotfiles,users,fabrice,tmux,users,vim,zsh
+  copy:
+    src: users/fabrice/tmux/tmux.conf.workstation
+    dest: /home/fabrice/.tmux.conf
+    owner: fabrice
+    group: fabrice
+    mode: 0600
+  when: "'server' in group_names"
 
 - name: users | fabrice | copy dotfiles
   tags: dotfiles,users,fabrice,tmux,users,vim,zsh
@@ -108,29 +108,29 @@
     - { src: 'vim/vimrc', dest: '.vimrc' }
     - { src: 'zsh/zshrc', dest: '.zshrc' } #TODO: review these configs
 
-# - name: users | fabrice | clone tmux-completion plugin repository #TODO: might be needed - TMUX
-#   tags: dotfiles,fabrice,users,tmux
-#   git:
-#     repo: https://github.com/srsudar/tmux-completion.git
-#     dest: /home/fabrice/.tmux/plugins/completion
-#     force: yes
-#   notify: update_tmux_plugin_perms
+- name: users | fabrice | clone tmux-completion plugin repository
+  tags: dotfiles,fabrice,users,tmux
+  git:
+    repo: https://github.com/srsudar/tmux-completion.git
+    dest: /home/fabrice/.tmux/plugins/completion
+    force: yes
+  notify: update_tmux_plugin_perms
 
-# - name: users | fabrice | clone tmux-continuum plugin repository #TODO: might be needed -TMUX
-#   tags: dotfiles,fabrice,users,tmux
-#   git:
-#     repo: https://github.com/tmux-plugins/tmux-continuum
-#     dest: /home/fabrice/.tmux/plugins/continuum
-#     force: yes
-#   notify: update_tmux_plugin_perms
+- name: users | fabrice | clone tmux-continuum plugin repository
+  tags: dotfiles,fabrice,users,tmux
+  git:
+    repo: https://github.com/tmux-plugins/tmux-continuum
+    dest: /home/fabrice/.tmux/plugins/continuum
+    force: yes
+  notify: update_tmux_plugin_perms
 
-# - name: users | fabrice | clone tmux-resurrect plugin repository  #TODO: might be needed -TMUX
-#   tags: dotfiles,fabrice,users,tmux
-#   git:
-#     repo: https://github.com/tmux-plugins/tmux-resurrect
-#     dest: /home/fabrice/.tmux/plugins/resurrect
-#     force: yes
-#   notify: update_tmux_plugin_perms
+- name: users | fabrice | clone tmux-resurrect plugin repository
+  tags: dotfiles,fabrice,users,tmux
+  git:
+    repo: https://github.com/tmux-plugins/tmux-resurrect
+    dest: /home/fabrice/.tmux/plugins/resurrect
+    force: yes
+  notify: update_tmux_plugin_perms
 
 - name: users | fabrice | copy individual zsh config files
   tags: dotfiles,fabrice,users,zsh
