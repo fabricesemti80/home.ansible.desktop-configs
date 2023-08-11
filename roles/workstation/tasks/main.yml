@@ -5,9 +5,9 @@
 - include_vars: common.yml
   tags: always
 
-# - block:
-#   ## User configs
-#   - import_tasks: users/fabrice.yml
+- block:
+  ## User configs
+  - import_tasks: users/fabrice.yml
 
 # ## desktop environments
 
