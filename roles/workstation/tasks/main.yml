@@ -1,11 +1,12 @@
 # Load distro-specific variables
-- include_vars:
-  vars:
-    params:
-      files:
-        - '{{ ansible_distribution }}.yml'
-        - common.yml
-  tags: always
+- name: Load a variable file based on the OS type, or a default if not found. Using free-form to specify the file.
+  include_vars:
+    files:
+      - '{{ ansible_distribution }}.yml'
+      - common.yml
+  tags:
+    - always
+
 
 # - block:
 #   ## User configs
