@@ -10,13 +10,13 @@ gnome_extensions:
   - url: https://extensions.gnome.org/download-extension/hidetopbar@mathieu.bidon.ca.shell-extension.zip?version_tag=6450
     name: hidetopbar@mathieu.bidon.ca
   - id: 15
-  - id: 1160
-    url: https://example.com/gnome-extension/1160.zip
+  # - id: 1160
+  #   url: https://example.com/gnome-extension/1160.zip
   - id: 1236
     name: CustomNamedExtension
-  - id: 1267
-    name: CustomNamedExtension2
-    url: https://example.com/gnome-extension/1267.zip
+  # - id: 1267
+  #   name: CustomNamedExtension2
+  #   url: https://example.com/gnome-extension/1267.zip
   - id: 1112
     enable: yes
 gnome_fonts:

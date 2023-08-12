@@ -8,6 +8,7 @@
 
 - name: Include and execute tasks from petermosmans.customize-gnome role
   tags: always
+  become_method: sudo
   include_role:
     name: petermosmans.customize-gnome
 
