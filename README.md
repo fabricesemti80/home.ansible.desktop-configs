@@ -44,5 +44,5 @@ After it's run for the first time manually, this Ansible config creates its own 
 ```sh
 # -U: the https url of the repo
 # -C: needed only if using certain branhc (omit, if using the branch defined in the config)
-sudo ansible-pull -U https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.git -C fabrice
+sudo ansible-pull -U https://github.com/fabricesemti80/home.ansible.linux-config-with-ansible-pull.git -C fabrice
 ```
