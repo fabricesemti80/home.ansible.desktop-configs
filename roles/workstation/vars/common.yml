@@ -33,5 +33,5 @@ gnome_gsettings:
     value: TOP
 gnome_packages:
   - fonts-roboto
-gnome_user: root
+gnome_user: fabrice
 gtk_version: 3.0
