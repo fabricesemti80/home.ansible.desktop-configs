@@ -8,7 +8,6 @@
 
 - name: Include and execute tasks from petermosmans.customize-gnome role
   tags: always
-  become_user: fabrice
   include_role:
     name: petermosmans.customize-gnome
 
