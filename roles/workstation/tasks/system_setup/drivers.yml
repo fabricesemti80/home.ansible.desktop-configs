@@ -6,12 +6,19 @@
     url: https://www.synaptics.com/sites/default/files/Ubuntu/pool/stable/main/all/synaptics-repository-keyring.deb
     dest: /home/fabrice/downloads/synaptics-repository-keyring.deb
     mode: 0600
-    when: ansible_distribution in ["Debian", "Ubuntu"]
+  when: ansible_distribution in ["Debian", "Ubuntu"]
 
 - name: system setup | drivers | install .deb package
   tags: distro-setup, dirvers, displaylink
   apt:
     deb: /home/fabrice/downloads/synaptics-repository-keyring.deb
+  when: ansible_distribution in ["Debian", "Ubuntu"]
+
+# - name: system setup | drivers | update package cache (arch) # TODO: fix arch install
+#   tags: always
+#   pacman: update_cache=yes
+#   changed_when: False
+#   when: ansible_distribution == "Archlinux"
 
 - name: system setup | drivers | update package cache (debian, etc)
   tags: distro-setup, dirvers, displaylink
@@ -24,3 +31,4 @@
   apt:
     name: displaylink-driver
     state: present
+  when: ansible_distribution in ["Debian", "Ubuntu"]
