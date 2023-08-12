@@ -1,5 +1,4 @@
 ---
----
 # MegaLinter GitHub Action configuration file
 # More info at https://megalinter.io
 name: MegaLinter
