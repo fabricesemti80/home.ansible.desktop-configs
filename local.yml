@@ -34,7 +34,7 @@
   roles:
     - workstation
 
-- hosts: gtk-theme
+- hosts: workstation
   tags: gtk-theme
   become_user: fabrice
   roles:
