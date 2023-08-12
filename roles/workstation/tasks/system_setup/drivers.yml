@@ -1,20 +1,30 @@
-- name: system setup | drivers | copy displaylink driver archive
+# - name: system setup | drivers | copy displaylink driver archive
+#   tags: distro-setup
+#   copy:
+#     src: 'drivers/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
+#     dest: '/home/fabrice/downloads/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
+#     owner: fabrice
+#     group: fabrice
+#     mode: 0600
+
+# - name: system setup | drivers | extract displaylink driver archive
+#   tags: distro-setup
+#   unarchive:
+#     src: '/home/fabrice/downloads/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
+#     dest: /home/fabrice/downloads
+
+# - name: system setup | drivers | remove displaylink driver archive
+#   tags: distro-setup
+#   file:
+#     path: '/home/fabrice/downloads/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
+#     state: absent
+
+
+- name: system setup | drivers | copy displaylink driver archive # https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu
   tags: distro-setup
-  copy:
-    src: 'drivers/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
-    dest: '/home/fabrice/downloads/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
+  ansible.builtin.get_url:
+    url: https://www.synaptics.com/sites/default/files/Ubuntu/pool/stable/main/all/synaptics-repository-keyring.deb
+    dest: /home/fabrice/downloads/synaptics-repository-keyring.deb
     owner: fabrice
     group: fabrice
     mode: 0600
-
-- name: system setup | drivers | extract displaylink driver archive
-  tags: distro-setup
-  unarchive:
-    src: '/home/fabrice/downloads/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
-    dest: /home/fabrice/downloads
-
-- name: system setup | drivers | remove displaylink driver archive
-  tags: distro-setup
-  file:
-    path: '/home/fabrice/downloads/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
-    state: absent
