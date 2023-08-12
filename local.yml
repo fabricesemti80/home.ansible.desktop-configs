@@ -33,7 +33,12 @@
   become: true
   roles:
     - workstation
-    - role: petermosmans.customize-gnome
+
+- hosts: gtk-theme
+  tags: gtk-theme
+  become_user: fabrice
+  roles:
+    - petermosmans.customize-gnome
 
 # - hosts: server
 #   tags: server
