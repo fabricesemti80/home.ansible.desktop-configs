@@ -54,6 +54,9 @@
 #   - include_tasks: desktop_environments/gnome/terminal.yml
 #     when: gnome is defined and gnome == true
 
+  - include_tasks: desktop_environments/gnome/theme.yml
+    when: gnome is defined and gnome == true
+
 #   - include_tasks: desktop_environments/gnome/tracker.yml
 #     when: gnome is defined and gnome == true
 

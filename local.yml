@@ -27,7 +27,6 @@
   become: true
   roles:
     - workstation
-    - petermosmans.customize-gnome
 
 # - hosts: server
 #   tags: server
