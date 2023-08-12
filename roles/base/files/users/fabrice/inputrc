@@ -1,2 +1,5 @@
 # Disable the annoying terminal beep
 set bell-style none
+
+# Show all possible completions without waiting for confirmation
+set show-all-if-ambiguous on

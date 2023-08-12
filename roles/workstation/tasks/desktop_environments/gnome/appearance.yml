@@ -56,8 +56,8 @@
 #    key: "/org/gnome/desktop/interface/gtk-theme"
 #    value: "'Shades-of-gray'"
 
-#- name: gnome | appearance | set shell theme
-#  become_user: fabrice
-#  dconf:
-#    key: "/org/gnome/shell/extensions/user-theme/name"
-#    value: "'Shades-of-gray'"
+- name: gnome | appearance | set shell theme
+  become_user: fabrice
+  dconf:
+    key: "/org/gnome/shell/extensions/user-theme/name"
+    value: "'Shades-of-gray'"
