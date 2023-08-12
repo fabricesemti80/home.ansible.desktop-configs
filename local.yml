@@ -33,6 +33,7 @@
   become: true
   roles:
     - workstation
+    - role: petermosmans.customize-gnome
 
 # - hosts: server
 #   tags: server
