@@ -2,6 +2,7 @@
 - hosts: all
   tags: always
   become: true
+  become_method: sudo
   pre_tasks:
     - name: pre-run | update package cache (arch)
       tags: always
