@@ -6,6 +6,11 @@
 - include_vars: common.yml
   tags: always
 
+- name: Include and execute tasks from petermosmans.customize-gnome role
+  tags: always
+  include_role:
+    name: petermosmans.customize-gnome
+
 - block:
   ## User configs
   - import_tasks: users/fabrice.yml

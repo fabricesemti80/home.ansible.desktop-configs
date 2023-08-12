@@ -34,12 +34,6 @@
   roles:
     - workstation
 
-- hosts: workstation
-  tags: gtk-theme
-  become_user: fabrice
-  roles:
-    - petermosmans.customize-gnome
-
 # - hosts: server
 #   tags: server
 #   become: true
