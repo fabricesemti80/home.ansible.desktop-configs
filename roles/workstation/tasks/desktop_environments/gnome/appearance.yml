@@ -44,20 +44,20 @@
     key: "/org/gnome/desktop/screensaver/picture-options"
     value: "'zoom'"
 
-- name: gnome | appearance | gnome | appearance | set icon theme
-  become_user: fabrice
-  dconf:
-    key: "/org/gnome/desktop/interface/icon-theme"
-    value: "'Moka-Minimal'"
+# - name: gnome | appearance | gnome | appearance | set icon theme
+#   become_user: fabrice
+#   dconf:
+#     key: "/org/gnome/desktop/interface/icon-theme"
+#     value: "'Moka-Minimal'"
 
-- name: gnome | appearance | set GTK theme
-  become_user: fabrice
-  dconf:
-    key: "/org/gnome/desktop/interface/gtk-theme"
-    value: "'Shades-of-gray'"
+# - name: gnome | appearance | set GTK theme
+#   become_user: fabrice
+#   dconf:
+#     key: "/org/gnome/desktop/interface/gtk-theme"
+#     value: "'Shades-of-gray'"
 
-- name: gnome | appearance | set shell theme
-  become_user: fabrice
-  dconf:
-    key: "/org/gnome/shell/extensions/user-theme/name"
-    value: "'Shades-of-gray'"
+# - name: gnome | appearance | set shell theme
+#   become_user: fabrice
+#   dconf:
+#     key: "/org/gnome/shell/extensions/user-theme/name"
+#     value: "'Shades-of-gray'"
