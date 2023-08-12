@@ -39,8 +39,8 @@
 #   - include_tasks: desktop_environments/gnome/keybindings.yml
 #     when: gnome is defined and gnome == true
 
-#   - include_tasks: desktop_environments/gnome/nautilus.yml
-#     when: gnome is defined and gnome == true
+  - include_tasks: desktop_environments/gnome/nautilus.yml
+    when: gnome is defined and gnome == true
 
 #   - include_tasks: desktop_environments/gnome/packages.yml
 #     when: gnome is defined and gnome == true
