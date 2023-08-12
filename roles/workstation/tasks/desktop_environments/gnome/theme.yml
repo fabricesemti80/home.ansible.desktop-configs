@@ -1,10 +1,10 @@
 ---
-# - name: gnome | theme | install petermosmans.customize-gnome # https://galaxy.ansible.com/PeterMosmans/customize-gnome
-#   tags: gnome,gnome-theme
-#   ansible.builtin.shell: ansible-galaxy install petermosmans.customize-gnome
-#   become: yes
+- name: gnome | theme | install petermosmans.customize-gnome # https://galaxy.ansible.com/PeterMosmans/customize-gnome
+  tags: gnome,gnome-theme
+  ansible.builtin.shell: ansible-galaxy install petermosmans.customize-gnome
+  become: yes
 
 - name: gnome | theme | include and execute tasks from petermosmans.customize-gnome
-  tasgs: gnome,gnome-theme
+  tags: gnome,gnome-theme
   include_role:
     name: petermosmans.customize-gnome
