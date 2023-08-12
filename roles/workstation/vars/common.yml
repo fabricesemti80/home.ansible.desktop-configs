@@ -6,19 +6,19 @@ packer_version: 1.9.2
 gnome_dconf:
   - key: /org/gnome/desktop/background/show-desktop-icons
     value: "false"
-gnome_extensions:
-  - url: https://extensions.gnome.org/download-extension/hidetopbar@mathieu.bidon.ca.shell-extension.zip?version_tag=6450
-    name: hidetopbar@mathieu.bidon.ca
-  - id: 15
-  # - id: 1160
-  #   url: https://example.com/gnome-extension/1160.zip
-  - id: 1236
-    name: CustomNamedExtension
-  # - id: 1267
-  #   name: CustomNamedExtension2
-  #   url: https://example.com/gnome-extension/1267.zip
-  - id: 1112
-    enable: yes
+# gnome_extensions:
+#   - url: https://extensions.gnome.org/download-extension/hidetopbar@mathieu.bidon.ca.shell-extension.zip?version_tag=6450
+#     name: hidetopbar@mathieu.bidon.ca
+#   - id: 15
+#   # - id: 1160
+#   #   url: https://example.com/gnome-extension/1160.zip
+#   - id: 1236
+#     name: CustomNamedExtension
+#   # - id: 1267
+#   #   name: CustomNamedExtension2
+#   #   url: https://example.com/gnome-extension/1267.zip
+#   - id: 1112
+#     enable: yes
 gnome_fonts:
   - url: https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
     name: SourceCodePro
