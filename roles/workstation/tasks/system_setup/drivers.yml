@@ -2,7 +2,7 @@
   tags: distro-setup
   copy:
     src: 'drivers/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
-    dest: '/usr/downloads/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
+    dest: '/home/fabrice/downloads/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
     owner: fabrice
     group: fabrice
     mode: 0600
