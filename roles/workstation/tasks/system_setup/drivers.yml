@@ -1,4 +1,4 @@
-- name: system setup | drivers | copy displaylink driver package
+- name: system setup | drivers | copy displaylink driver archive
   tags: distro-setup
   copy:
     src: 'drivers/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
@@ -6,3 +6,15 @@
     owner: fabrice
     group: fabrice
     mode: 0600
+
+- name: system setup | drivers | extract displaylink driver archive
+  tags: distro-setup
+  unarchive:
+    src: '/home/fabrice/downloads/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
+    dest: /home/fabrice/downloads
+
+- name: system setup | drivers | remove displaylink driver archive
+  tags: distro-setup
+  file:
+    path: '/home/fabrice/downloads/DisplayLink USB Graphics Software for Ubuntu5.8-EXE.zip'
+    state: absent
