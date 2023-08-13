@@ -70,4 +70,3 @@
   ansible.builtin.git:
     repo: 'https://github.com/vinceliuice/Orchis-theme.git'
     dest: /tmp/Orchis-theme
-    version: latest
