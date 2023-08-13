@@ -73,5 +73,5 @@
 
 - name: gnome | appearance | install Orchis GTK theme
   tags: gnome,gnome-theme
-  shell: /tmp/Orchis-theme/install.sh
-  args: '-t default'
+  shell: |
+    /tmp/Orchis-theme/install.sh -t default
