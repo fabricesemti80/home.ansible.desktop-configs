@@ -78,7 +78,6 @@
   apt: name=appstream-util
 
 - name: gnome | appearance | allow flatpack override
-  become_user: fabrice
   become: true
   become_method: sudo
   tags: gnome,gnome-theme
