@@ -1,7 +1,7 @@
 # Personal Ansible Desktop Configs
 
 This is a repository utilising `ansible-pull` to configure Linux desktop and server envionments. 
-It is based on <https://github.com/LearnLinuxTV/personal_ansible_desktop_configs>, however it has been heavily modified, to reflect my needs.
+It is based on [this original repo](https://github.com/LearnLinuxTV/personal_ansible_desktop_configs), however it has been heavily modified, to reflect my needs.
 
 ## Disclaimer
 This repository contains a copy of the Ansible configuration that I use for laptops, desktops as well as servers.
