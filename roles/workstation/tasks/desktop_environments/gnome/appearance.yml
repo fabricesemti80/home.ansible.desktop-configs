@@ -65,6 +65,8 @@
 #     key: "/org/gnome/shell/extensions/user-theme/name"
 #     value: "'Arc-Dark'"
 
+## ? https://github.com/vinceliuice/Orchis-theme
+
 - name: gnome | appearance | checkout Orchis GTK theme
   tags: gnome,gnome-theme
   git:
@@ -73,7 +75,7 @@
 
 - name: gnome | appearance | install Orchis GTK theme
   tags: gnome,gnome-theme
-  shell: yes | /tmp/Orchis-theme/install.sh
+  shell: yes | /tmp/Orchis-theme/install.sh --shell 38 --tweaks macos
 
 - name: gnome | appearance | set desktop theme to Orchis-Dark GTK theme
   become_user: fabrice
