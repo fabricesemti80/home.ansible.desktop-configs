@@ -48,6 +48,12 @@
   shell: |
     curl -sS https://starship.rs/install.sh | sh -s -- -y
 
+- name: system setup | utilities | non-apt package | configure starship prompt
+  tags: packages,system,settings
+  # install Starship
+  shell: |
+    curl -sS https://starship.rs/install.sh | sh -s -- -y
+
 # - name: system setup | utilities | install utility packages [non-apt]
 #   tags: packages,system,settings
 #   # install Starship

@@ -106,7 +106,8 @@
     - { src: 'inputrc', dest: '.inputrc' }
     - { src: 'mc/mc.ini', dest: '.config/mc/ini' }
     - { src: 'vim/vimrc', dest: '.vimrc' }
-    - { src: 'zsh/zshrc', dest: '.zshrc' } #TODO: review these configs
+    - { src: 'zsh/zshrc', dest: '.zshrc' }
+    - { src: 'starship/starship.toml', dest: '.config/starship.toml' }
 
 - name: users | fabrice | clone tmux-completion plugin repository
   tags: dotfiles,fabrice,users,tmux
