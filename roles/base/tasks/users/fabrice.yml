@@ -65,6 +65,7 @@
     # - { dir: '.vim/colors' }
     # - { dir: '.vim/ftplugin' }
     - { dir: '.zsh' }
+    - { dir: '.fonts' }
 
 - name: users | fabrice | copy tmux config (server version)
   tags: dotfiles,users,fabrice,tmux,users,vim,zsh
@@ -221,3 +222,19 @@
 #     - { repo: 'https://github.com/tpope/vim-obsession.git', dest: '/home/fabrice/.vim/bundle/vim-obsession' }
 #     - { repo: 'https://github.com/vim-syntastic/syntastic.git', dest: '/home/fabrice/.vim/bundle/syntastic' }
 #   notify: update_vim_bundle_perms
+
+- name: Hack exists
+  shell: "ls /home/fabrice/.fonts/Hack*Nerd*Font*Complete*"
+  register: hack_exists
+  ignore_errors: yes
+
+- name: Download Hack
+  when: hack_exists is failed
+  ansible.builtin.unarchive:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/{{  item }}.zip
+    dest: "/home/fabrice/.fonts/"
+    remote_src: yes
+  with_items:
+   - Hack
+   - FiraCode
+   - FiraMono
