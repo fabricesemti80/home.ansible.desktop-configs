@@ -65,12 +65,23 @@
 #     key: "/org/gnome/shell/extensions/user-theme/name"
 #     value: "'Arc-Dark'"
 
-- name: gnome | appearance | checkout Orchis GTK theme
+- name: gnome | appearance | checkout stylepack
   tags: gnome,gnome-theme
   git:
-    repo: 'https://github.com/vinceliuice/Orchis-theme.git'
-    dest: /tmp/Orchis-theme
+    repo: 'https://github.com/refi64/stylepak.git'
+    dest: /tmp/stylepak
+
+- name: gnome | appearance | install stylepack pre-requisites - 1
+  apt: name=ostree
+
+- name: gnome | appearance | install stylepack pre-requisites - 2
+  apt: name=appstream-util
+
+- name: gnome | appearance | allow flatpack override
+  become_user: fabrice
+  tags: gnome,gnome-theme
+  shell: flatpak override --filesystem=xdg-config/gtk-4.0
 
 - name: gnome | appearance | install Orchis GTK theme
   tags: gnome,gnome-theme
-  shell: /tmp/Orchis-theme/install.sh --theme default --tweaks macos
+  shell: /tmp/stylepak/stylepak install-user Orchis
