@@ -1,0 +1,20 @@
+- name: Check if Homebrew is already installed
+  stat:
+    path: /usr/local/bin/brew
+  register: b
+
+- name: "Ansible | Creating a file with content"
+  copy:
+    dest: /tmp/install-homebrew.sh
+    content: |
+      #!/bin/bash
+      yes | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  when: not b.stat.exists
+
+- name: Install Homebrew
+  script: /tmp/install-homebrew.sh
+  when: not b.stat.exists
+
+- name: Remove install script
+  file: /tmp/install-homebrew.sh
+  state: absent
