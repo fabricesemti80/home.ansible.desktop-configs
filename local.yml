@@ -16,12 +16,6 @@
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu"]
 
-    - name: gnome | theme | install petermosmans.customize-gnome # https://galaxy.ansible.com/PeterMosmans/customize-gnome
-      tags: always
-      ansible.builtin.shell: ansible-galaxy install petermosmans.customize-gnome
-      become: yes
-      when: ansible_distribution in ["Debian", "Ubuntu"]
-
 # run roles
 - hosts: all
   tags: base
