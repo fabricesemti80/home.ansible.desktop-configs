@@ -48,3 +48,6 @@
     name: gdm
     enabled: true
     state: started
+
+- name: Install arc theme
+  apt: name=arc-theme
