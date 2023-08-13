@@ -46,5 +46,5 @@
   tags: packages,system,settings
   # install Starship
   shell: |
-    curl -sS https://starship.rs/install.sh | sh
+    yes | curl -sS https://starship.rs/install.sh | sh
     echo 'eval "$(starship init zsh)"' >> /home/$USER/.zshrc
