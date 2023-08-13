@@ -13,7 +13,7 @@
     state: present
     comment: "fabrice semti"
     password: "{{ fabrice_passwd }}"
-    shell: /bin/bash
+    shell: /bin/zsh # /bin/bash
 
 - name: users | fabrice | fabrice | add sudoers file
   tags: fabrice,settings,sudo,system,users

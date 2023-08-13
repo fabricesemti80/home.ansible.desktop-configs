@@ -1,6 +1,0 @@
-- name: system setup | zsh | enable ZSH shell and set default
-  become_user: fabrice
-  tags: zsh,ssh,system,settings
-  shell: |
-    command -v zsh | sudo tee -a /etc/shells
-    sudo chsh -s $(which zsh) fabrice
