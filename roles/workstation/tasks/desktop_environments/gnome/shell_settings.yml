@@ -129,5 +129,5 @@
   become_user: fabrice
   community.general.dconf:
     key: "/org/gnome/shell/enabled-extensions"
-    value: "['floatingDock@sun.wxg@gmail.com','user-theme@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']"
+    value: "['user-theme@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']"
     state: present
