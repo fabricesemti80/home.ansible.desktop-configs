@@ -66,3 +66,8 @@ alias chgrp='chgrp --preserve-root'
 
 # reload bash config
 alias reload="source ~/.bashrc"
+
+# activate Starship if installed
+if [ -x "/usr/local/bin/starship" ]; then
+    eval "$(starship init bash)"
+fi

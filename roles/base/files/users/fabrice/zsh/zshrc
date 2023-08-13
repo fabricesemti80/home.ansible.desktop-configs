@@ -9,3 +9,8 @@ source ~/.zsh/plugins.zsh
 source ~/.zsh/prompt.zsh
 source ~/.zsh/setopt.zsh
 source ~/.zsh/theming.zsh
+
+# activate Starship if installed
+if [ -x "/usr/local/bin/starship" ]; then
+    eval "$(starship init zsh)"
+fi
