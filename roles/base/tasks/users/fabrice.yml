@@ -224,7 +224,6 @@
 #   notify: update_vim_bundle_perms
 
 - name: Download Hack
-  when: hack_exists is failed
   ansible.builtin.unarchive:
     src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/{{  item }}.zip
     dest: "/home/fabrice/.fonts/"
