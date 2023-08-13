@@ -50,17 +50,24 @@
 #     key: "/org/gnome/desktop/interface/icon-theme"
 #     value: "'Moka-Minimal'"
 
-- name: gnome | appearance | install GTK theme
-  apt: name=arc-theme
+# - name: gnome | appearance | install GTK theme
+#   apt: name=arc-theme
 
-- name: gnome | appearance | set GTK theme
-  become_user: fabrice
-  dconf:
-    key: "/org/gnome/desktop/interface/gtk-theme"
-    value: "'Arc-Dark'"
+# - name: gnome | appearance | set GTK theme
+#   become_user: fabrice
+#   dconf:
+#     key: "/org/gnome/desktop/interface/gtk-theme"
+#     value: "'Arc-Dark'"
 
-- name: gnome | appearance | set shell theme
-  become_user: fabrice
-  dconf:
-    key: "/org/gnome/shell/extensions/user-theme/name"
-    value: "'Arc-Dark'"
+# - name: gnome | appearance | set shell theme
+#   become_user: fabrice
+#   dconf:
+#     key: "/org/gnome/shell/extensions/user-theme/name"
+#     value: "'Arc-Dark'"
+
+- name: gnome | appearance | download Orchis GTK theme
+  tags: gnome,gnome-theme
+  ansible.builtin.git:
+    repo: 'https://github.com/vinceliuice/Orchis-theme.git'
+    dest: /tmp/
+    version: latest
