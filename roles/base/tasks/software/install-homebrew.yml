@@ -12,7 +12,7 @@
   when: not b.stat.exists
 
 - name: Install Homebrew
-  shell: sh /tmp/install-homebrew.sh
+  shell: sudo -E sh /tmp/install-homebrew.sh  # The -E flag preserves the environment variables
   when: not b.stat.exists
   become: no
 
