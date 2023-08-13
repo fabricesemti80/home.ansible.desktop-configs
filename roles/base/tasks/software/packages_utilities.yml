@@ -41,3 +41,8 @@
       - man-db
       - man-pages
   when: ansible_distribution == "Archlinux"
+
+- name: system setup | utilities | install utility packages [non-apt]
+  tags: packages,system,settings
+  shell: |
+    sh <(curl https://tea.xyz)
