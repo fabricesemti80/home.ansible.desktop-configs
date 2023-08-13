@@ -17,7 +17,7 @@
     #- { key: foreground-color, value: "'rgb(170,170,170)'" }
     - { key: scrollback-unlimited, value: "true" }
     - { key: scrollbar-policy, value: "'never'" }
-    #- { key: use-system-font, value: "false" }
-    #- { key: use-theme-colors, value: "false" }
-    #- { key: visible-name, value: "'Main'" }
-    #- { key: font, value: "'Fira Mono Regular 12'" }
+    - { key: use-system-font, value: "false" }
+    - { key: use-theme-colors, value: "false" }
+    - { key: visible-name, value: "'Main'" }
+    - { key: font, value: "'Fira Mono Regular 12'" }
