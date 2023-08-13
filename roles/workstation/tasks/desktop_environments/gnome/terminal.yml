@@ -21,4 +21,4 @@
     - { key: use-theme-colors, value: "true" }
     #- { key: visible-name, value: "'Main'" }
     #- { key: font, value: "'Fira Mono Regular 12'" }
-    - { key: font, value: "'Fira Code Retina'" }
+    - { key: font, value: "'Fira Code Retina 11'" }
