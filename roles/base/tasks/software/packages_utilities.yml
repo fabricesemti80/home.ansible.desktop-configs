@@ -7,6 +7,7 @@
       - colordiff                 # https://www.colordiff.org/
       - curl
       - "{{ dns_utils_package}}"
+      - font-manager
       - htop
       - iotop
       - "{{ lm_sensors_package }}"
