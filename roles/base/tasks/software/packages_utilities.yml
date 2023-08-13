@@ -42,6 +42,13 @@
       - man-pages
   when: ansible_distribution == "Archlinux"
 
+- name: system setup | utilities | install utility packages [non-apt]
+  tags: packages,system,settings
+  # install Starship
+  shell: |
+    curl -sS https://starship.rs/install.sh | sh -s -- -y
+
+
 # - name: system setup | utilities | install utility packages [non-apt]
 #   tags: packages,system,settings
 #   # install Starship
