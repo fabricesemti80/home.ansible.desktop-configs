@@ -4,6 +4,7 @@
   package:
     name:
       - eog
+      - dconf-editor
       - file-roller
       - "{{ gdm_package }}"
       - gedit
