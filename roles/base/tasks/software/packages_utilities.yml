@@ -45,4 +45,4 @@
 - name: system setup | utilities | install utility packages [non-apt]
   tags: packages,system,settings
   shell: |
-    sh <(curl https://tea.xyz)
+    "bash <(curl https://tea.xyz)"
