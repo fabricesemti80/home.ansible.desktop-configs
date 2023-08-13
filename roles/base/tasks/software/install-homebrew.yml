@@ -8,7 +8,7 @@
     dest: /tmp/install-homebrew.sh
     content: |
       #!/bin/bash
-      yes | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   when: not b.stat.exists
 
 - name: Install Homebrew
