@@ -18,7 +18,6 @@
   - import_tasks: software/packages_cleanup.yml
   - import_tasks: software/packages_pip.yml
   - import_tasks: software/packages_utilities.yml
-  - import_tasks: software/install-homebrew.yml
 
   # Perform remaining tasks:
   - import_tasks: system_setup/clock.yml
