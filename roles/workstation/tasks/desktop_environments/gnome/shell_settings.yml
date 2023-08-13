@@ -117,6 +117,7 @@
     key: "/org/gnome/gnome-screenshot/auto-save-directory"
     value: "'/home/fabrice'"
 
+## & install and enable these extensions
 - name: gnome | shell settings | install extensions
   tags: gnome,gnome-shell,extensions
   apt:
