@@ -44,11 +44,11 @@
     key: "/org/gnome/desktop/screensaver/picture-options"
     value: "'zoom'"
 
-- name: gnome | appearance | enable user-theme extension
-  become_user: fabrice
-  shell: |
-    dconf write /org/gnome/shell/enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com']"
-    gnome-shell --replace &
+# - name: gnome | appearance | enable user-theme extension
+#   become_user: fabrice
+#   shell: |
+#     dconf write /org/gnome/shell/enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com']"
+#     gnome-shell --replace &
 
 ## & ARC theme
 # - name: gnome | appearance | gnome | appearance | set icon theme
