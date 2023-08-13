@@ -1,9 +1,9 @@
-- name: gnome | shell settings | button-layout
-  tags: gnome,gnome-shell
-  become_user: fabrice
-  dconf:
-    key: "/org/gnome/desktop/wm/preferences/button-layout"
-    value: "':close'"
+# - name: gnome | shell settings | button-layout
+#   tags: gnome,gnome-shell
+#   become_user: fabrice
+#   dconf:
+#     key: "/org/gnome/desktop/wm/preferences/button-layout"
+#     value: "':close'"
 
 # Disable hot corners
 - name: gnome | shell settings | enable-hot-corners
@@ -13,20 +13,20 @@
     key: "/org/gnome/shell/interface/enable-hot-corners"
     value: "false"
 
-- name: gnome | shell settings | event-sounds (disable)
-  tags: gnome,audio,sounds,alerts
-  become_user: fabrice
-  dconf:
-    key: "/org/gnome/desktop/sound/event-sounds"
-    value: "false"
+# - name: gnome | shell settings | event-sounds (disable)
+#   tags: gnome,audio,sounds,alerts
+#   become_user: fabrice
+#   dconf:
+#     key: "/org/gnome/desktop/sound/event-sounds"
+#     value: "false"
 
-- name: gnome | shell settings | disable hidpi-daemon
-  tags: gnome,gnome-shell,hidpi
-  become_user: fabrice
-  dconf:
-    key: "/com/system76/hidpi/enable"
-    value: "false"
-  when: ansible_distribution in ["Pop!_OS", "Ubuntu"]
+# - name: gnome | shell settings | disable hidpi-daemon
+#   tags: gnome,gnome-shell,hidpi
+#   become_user: fabrice
+#   dconf:
+#     key: "/com/system76/hidpi/enable"
+#     value: "false"
+#   when: ansible_distribution in ["Pop!_OS", "Ubuntu"]
 
 # Disable screen blanking
 - name: gnome | shell settings | idle-delay
@@ -37,12 +37,12 @@
     value: "uint32 0"
 
 # Disable input sounds
-- name: gnome | shell settings | input-feedback-sounds (disable input sounds)
-  tags: gnome,audio,sounds,alerts
-  become_user: fabrice
-  dconf:
-    key: "/org/gnome/desktop/sound/input-feedback-sounds"
-    value: "false"
+# - name: gnome | shell settings | input-feedback-sounds (disable input sounds)
+#   tags: gnome,audio,sounds,alerts
+#   become_user: fabrice
+#   dconf:
+#     key: "/org/gnome/desktop/sound/input-feedback-sounds"
+#     value: "false"
 
 # Disable automatic screen lock
 - name: gnome | shell settings | lock-enabled
@@ -87,13 +87,13 @@
     key: "/org/gnome/desktop/interface/show-battery-percentage"
     value: "true"
 
-# Disable lock screen notifications
-- name: gnome | shell settings | show-in-lock-screen
-  tags: gnome,gnome-lockscreen
-  become_user: fabrice
-  dconf:
-    key: "/org/gnome/desktop/notifications/show-in-lock-screen"
-    value: "false"
+# # Disable lock screen notifications
+# - name: gnome | shell settings | show-in-lock-screen
+#   tags: gnome,gnome-lockscreen
+#   become_user: fabrice
+#   dconf:
+#     key: "/org/gnome/desktop/notifications/show-in-lock-screen"
+#     value: "false"
 
 - name: gnome | shell settings | tile-by-default
   tags: gnome,gnome-lockscreen
