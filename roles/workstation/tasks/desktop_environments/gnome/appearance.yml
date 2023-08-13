@@ -73,4 +73,16 @@
 
 - name: gnome | appearance | install Orchis GTK theme
   tags: gnome,gnome-theme
-  shell: /tmp/Orchis-theme/install.sh
+  shell: yes | /tmp/Orchis-theme/install.sh
+
+- name: gnome | appearance | set desktop theme to Orchis-Dark GTK theme
+  become_user: fabrice
+  dconf:
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    value: "'Orchis-Dark'"
+
+- name: gnome | appearance | set shell theme to Orchis GTK theme
+  become_user: fabrice
+  dconf:
+    key: "/org/gnome/shell/extensions/user-theme/name"
+    value: "'Orchis-Dark'"
