@@ -8,11 +8,11 @@
     dest: /tmp/install-homebrew.sh
     content: |
       #!/bin/bash
-      yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      yes | $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
   when: not b.stat.exists
 
 - name: Install Homebrew
-  shell: sudo -E sh /tmp/install-homebrew.sh  # The -E flag preserves the environment variables
+  shell: sh /tmp/install-homebrew.sh  # The -E flag preserves the environment variables
   when: not b.stat.exists
   become: no
 
