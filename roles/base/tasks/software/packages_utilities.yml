@@ -56,6 +56,12 @@
   shell: |
     curl -sS https://starship.rs/install.sh | sh -s -- -y
 
+- name: system setup | utilities | non-apt package | download config for starship
+  get_url:
+    url: https://starship.rs/presets/toml/no-empty-icons.toml
+    dest: /home/fabrice/.config/starship.toml
+
+
 # - name: system setup | utilities | install utility packages [non-apt]
 #   tags: packages,system,settings
 #   # install Starship

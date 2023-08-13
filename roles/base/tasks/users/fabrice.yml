@@ -107,7 +107,13 @@
     - { src: 'mc/mc.ini', dest: '.config/mc/ini' }
     - { src: 'vim/vimrc', dest: '.vimrc' }
     - { src: 'zsh/zshrc', dest: '.zshrc' }
-    - { src: 'starship/starship.toml', dest: '.config/starship.toml' }
+    # - { src: 'starship/starship.toml', dest: '.config/starship.toml' } #todo:review or remove
+
+- name: users | fabrice | set config for starship
+  tags: dotfiles,fabrice,users,starship
+  get_url:
+    url: https://starship.rs/presets/toml/no-empty-icons.toml
+    dest: /home/fabrice/.config/starship.toml
 
 - name: users | fabrice | clone tmux-completion plugin repository
   tags: dotfiles,fabrice,users,tmux
