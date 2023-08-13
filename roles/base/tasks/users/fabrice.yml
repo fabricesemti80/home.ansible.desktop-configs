@@ -33,7 +33,7 @@
     group: fabrice
     mode: 0700
   with_items:
-    - { dir: '/home/fabrice/.ssh' }
+    - { dir: "/home/fabrice/.ssh" }
 
 - name: users | fabrice | add public key
   tags: dotfiles,fabrice,ssh,ssh-keys,users
@@ -52,20 +52,20 @@
     group: fabrice
     mode: 0700
   with_items:
-    - { dir: '.bash' }
-    - { dir: '.config' }
-    - { dir: '.config/htop' }
-    - { dir: '.config/mc' }
-    - { dir: '.tmux' }
-    - { dir: '.tmux/config' }
-    - { dir: '.tmux/plugins' }
+    - { dir: ".bash" }
+    - { dir: ".config" }
+    - { dir: ".config/htop" }
+    - { dir: ".config/mc" }
+    - { dir: ".tmux" }
+    - { dir: ".tmux/config" }
+    - { dir: ".tmux/plugins" }
     # - { dir: '.vim' }
     # - { dir: '.vim/autoload' }
     # - { dir: '.vim/bundle' }
     # - { dir: '.vim/colors' }
     # - { dir: '.vim/ftplugin' }
-    - { dir: '.zsh' }
-    - { dir: '.fonts' }
+    - { dir: ".zsh" }
+    - { dir: ".fonts" }
 
 - name: users | fabrice | copy tmux config (server version)
   tags: dotfiles,users,fabrice,tmux,users,vim,zsh
@@ -96,18 +96,18 @@
     group: fabrice
     mode: 0600
   with_items:
-    - { src: 'bash/bash_aliases', dest: '.bash/bash_aliases' }
-    - { src: 'bash/bash_profile', dest: '.bash_profile' }
-    - { src: 'bash/bash_prompt', dest: '.bash/bash_prompt' }
-    - { src: 'bash/bash_functions', dest: '.bash/bash_functions' }
-    - { src: 'bash/bashrc', dest: '.bashrc' }
-    - { src: 'bash/profile', dest: '.profile' }
-    - { src: 'git/gitconfig', dest: '.gitconfig' }
-    - { src: 'htop/htoprc', dest: '.config/htop/htoprc' }
-    - { src: 'inputrc', dest: '.inputrc' }
-    - { src: 'mc/mc.ini', dest: '.config/mc/ini' }
-    - { src: 'vim/vimrc', dest: '.vimrc' }
-    - { src: 'zsh/zshrc', dest: '.zshrc' }
+    - { src: "bash/bash_aliases", dest: ".bash/bash_aliases" }
+    - { src: "bash/bash_profile", dest: ".bash_profile" }
+    - { src: "bash/bash_prompt", dest: ".bash/bash_prompt" }
+    - { src: "bash/bash_functions", dest: ".bash/bash_functions" }
+    - { src: "bash/bashrc", dest: ".bashrc" }
+    - { src: "bash/profile", dest: ".profile" }
+    - { src: "git/gitconfig", dest: ".gitconfig" }
+    - { src: "htop/htoprc", dest: ".config/htop/htoprc" }
+    - { src: "inputrc", dest: ".inputrc" }
+    - { src: "mc/mc.ini", dest: ".config/mc/ini" }
+    - { src: "vim/vimrc", dest: ".vimrc" }
+    - { src: "zsh/zshrc", dest: ".zshrc" }
     # - { src: 'starship/starship.toml', dest: '.config/starship.toml' } #todo:review or remove
 
 - name: users | fabrice | set config for starship
@@ -149,17 +149,17 @@
     group: fabrice
     mode: 0600
   with_items:
-    - { src: 'aliases.zsh' }
-    - { src: 'bindkey.zsh' }
-    - { src: 'completion.zsh' }
-    - { src: 'exports.zsh' }
-    - { src: 'functions.zsh' }
-    - { src: 'history.zsh' }
-    - { src: 'path.zsh' }
-    - { src: 'plugins.zsh' }
-    - { src: 'prompt.zsh' }
-    - { src: 'setopt.zsh' }
-    - { src: 'theming.zsh' }
+    - { src: "aliases.zsh" }
+    - { src: "bindkey.zsh" }
+    - { src: "completion.zsh" }
+    - { src: "exports.zsh" }
+    - { src: "functions.zsh" }
+    - { src: "history.zsh" }
+    - { src: "path.zsh" }
+    - { src: "plugins.zsh" }
+    - { src: "prompt.zsh" }
+    - { src: "setopt.zsh" }
+    - { src: "theming.zsh" }
 
 # - name: users | fabrice | copy vim ftype files  #TODO: might be needed -VIM
 #   tags: dotfiles,fabrice,users,vim
@@ -223,12 +223,13 @@
 #     - { repo: 'https://github.com/vim-syntastic/syntastic.git', dest: '/home/fabrice/.vim/bundle/syntastic' }
 #   notify: update_vim_bundle_perms
 
-- name: Download Hack
-  ansible.builtin.unarchive:
+- name: users | fabrice | download fonts
+  tags: fonts,fabrice,users,nerdfonts
+  unarchive:
     src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/{{  item }}.zip
     dest: "/home/fabrice/.fonts/"
     remote_src: yes
   with_items:
-   - Hack
-   - FiraCode
-   - FiraMono
+    - Hack
+    - FiraCode
+    - FiraMono
