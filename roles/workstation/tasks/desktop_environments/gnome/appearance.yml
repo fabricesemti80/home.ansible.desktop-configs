@@ -69,5 +69,5 @@
   tags: gnome,gnome-theme
   ansible.builtin.git:
     repo: 'https://github.com/vinceliuice/Orchis-theme.git'
-    dest: /tmp/
+    dest: /tmp
     version: latest
