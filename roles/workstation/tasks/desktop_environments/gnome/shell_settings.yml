@@ -118,11 +118,14 @@
     value: "'/home/fabrice'"
 
 - name: gnome | shell settings | install extensions
+  tags: gnome,gnome-shell,extensions
   apt:
     name:
       - gnome-shell-extension-appindicator
 
 - name: gnome | shell settings | enble extensions
+  tags: gnome,gnome-shell,extensions
+  become_user: fabrice
   community.general.dconf:
     key: "/org/gnome/shell/enabled-extensions"
     value: "['user-theme@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']"
