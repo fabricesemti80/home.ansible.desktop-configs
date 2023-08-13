@@ -12,7 +12,7 @@
   when: not b.stat.exists
 
 - name: Install Homebrew
-  script: sh  /tmp/install-homebrew.sh
+  shell: sh /tmp/install-homebrew.sh
   when: not b.stat.exists
 
 # - name: Remove install script
