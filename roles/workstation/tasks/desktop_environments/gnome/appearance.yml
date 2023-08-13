@@ -46,9 +46,9 @@
 
 - name: gnome | appearance | enable user-theme extension
   become_user: fabrice
-  dconf:
-    key: "/org/gnome/shell/enabled-extensions"
-    value: "'user-theme@gnome-shell-extensions.gcampax.github.com'"
+  shell: |
+    dconf write /org/gnome/shell/enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com']"
+    gnome-shell --replace &
 
 ## & ARC theme
 # - name: gnome | appearance | gnome | appearance | set icon theme
