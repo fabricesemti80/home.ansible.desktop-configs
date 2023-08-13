@@ -42,9 +42,9 @@
       - man-pages
   when: ansible_distribution == "Archlinux"
 
-- name: system setup | utilities | install utility packages [non-apt]
-  tags: packages,system,settings
-  # install Starship
-  shell: |
-    yes | curl -sS https://starship.rs/install.sh | sh
-    echo 'eval "$(starship init zsh)"' >> /home/$USER/.zshrc
+# - name: system setup | utilities | install utility packages [non-apt]
+#   tags: packages,system,settings
+#   # install Starship
+#   shell: |
+#     yes | curl -sS https://starship.rs/install.sh | sh
+#     echo 'eval "$(starship init zsh)"' >> /home/$USER/.zshrc
