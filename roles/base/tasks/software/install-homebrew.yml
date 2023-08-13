@@ -16,5 +16,7 @@
   when: not b.stat.exists
 
 - name: Remove install script
-  file: /tmp/install-homebrew.sh
-  state: absent
+  file:
+    path: /tmp/install-homebrew.sh
+    state: absent
+  become: yes
