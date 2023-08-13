@@ -14,6 +14,7 @@
       - gnome-control-center
       - gnome-disk-utility
 #      - gnome-documents
+      - gtk2-engines-murrine
       - gnome-icon-theme
 #      - gnome-music
 #      - gnome-photos
@@ -25,6 +26,7 @@
       - gnome-terminal
       - gnome-todo
       - gnome-tweaks
+      - gnome-themes-extra
       - nautilus
 
 - name: gnome | packages | install flatpak support in gnome software
