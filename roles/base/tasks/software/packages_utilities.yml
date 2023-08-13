@@ -25,6 +25,7 @@
       - rsync
       - screen
       - sshfs
+      - tilix
       - tmux                         # https://github.com/tmux/tmux/wiki # https://www.redhat.com/sysadmin/introduction-tmux-linux #TODO: learn
       - traceroute
       - "{{ vim_package }}"
