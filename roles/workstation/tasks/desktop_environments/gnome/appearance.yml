@@ -44,6 +44,13 @@
     key: "/org/gnome/desktop/screensaver/picture-options"
     value: "'zoom'"
 
+- name: gnome | appearance | enable user-theme extension
+  become_user: fabrice
+  dconf:
+    key: "/org/gnome/shell/enabled-extensions"
+    value: "'user-theme@gnome-shell-extensions.gcampax.github.com'"
+
+## & ARC theme
 # - name: gnome | appearance | gnome | appearance | set icon theme
 #   become_user: fabrice
 #   dconf:
@@ -65,6 +72,7 @@
 #     key: "/org/gnome/shell/extensions/user-theme/name"
 #     value: "'Arc-Dark'"
 
+## & ORCHIS [dark] theme
 ## ? https://github.com/vinceliuice/Orchis-theme
 
 - name: gnome | appearance | checkout Orchis GTK theme
