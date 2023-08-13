@@ -45,8 +45,8 @@
   - include_tasks: desktop_environments/gnome/packages.yml
     when: gnome is defined and gnome == true
 
-#   - include_tasks: desktop_environments/gnome/peripherals.yml
-#     when: gnome is defined and gnome == true
+  - include_tasks: desktop_environments/gnome/peripherals.yml
+    when: gnome is defined and gnome == true
 
   - include_tasks: desktop_environments/gnome/shell_settings.yml
     when: gnome is defined and gnome == true
@@ -60,7 +60,7 @@
   ## system setup
   # - import_tasks: system_setup/autofs.yml
   # - import_tasks: system_setup/scripts.yml
-  # - import_tasks: system_setup/tweaks.yml
+  - import_tasks: system_setup/tweaks.yml
   - import_tasks: system_setup/drivers.yml
 
 #   ## install software
