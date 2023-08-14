@@ -86,6 +86,7 @@
   shell: yes | /tmp/Orchis-theme/install.sh --shell 38 --tweaks macos
 
 - name: gnome | appearance | set desktop theme to Orchis-Dark GTK theme
+  tags: gnome,gnome-theme
   become_user: fabrice
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
@@ -96,3 +97,21 @@
   dconf:
     key: "/org/gnome/shell/extensions/user-theme/name"
     value: "'Orchis-Dark'"
+
+## & COLLOID icon theme
+- name: gnome | appearance | checkout Colid Icon theme
+  tags: gnome,gnome-icons
+  git:
+    repo: 'https://github.com/vinceliuice/Colloid-icon-theme.git'
+    dest: /tmp/Colloid-icon-theme
+
+- name: gnome | appearance | install Colid Icon theme
+  tags: gnome,gnome-icons
+  shell: yes | /tmp/Colloid-icon-theme/install.sh
+
+- name: gnome | appearance | set icon theme to Colid Icon theme
+  tags: gnome,gnome-icons
+  become_user: fabrice
+  dconf:
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: "'Colloid'"
