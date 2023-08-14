@@ -11,7 +11,7 @@
       - dconf-editor
       - dialog
       - easytag
-      - exfat-utils
+      - exfatprogs
       - "{{ font_fira_mono_package }}"
       - "{{ font_hack_ttf_package }}"
       - "{{ font_inconsolata_package }}"
