@@ -69,4 +69,4 @@
   post_tasks:
     - name: Suggest login/logout to complete Gnome configuration
       shell: |
-         echo 'Please logout/login to complete Gnome configuration.' | lolcat
+         echo 'Please logout/login to complete the configuration.' | lolcat
