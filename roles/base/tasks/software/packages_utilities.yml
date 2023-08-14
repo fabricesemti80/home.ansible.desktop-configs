@@ -11,6 +11,7 @@
       - htop
       - iotop
       - "{{ lm_sensors_package }}"
+      - lolcat
       - lsof
       - mc                         # https://midnight-commander.org/
       - mosh                       # https://github.com/mobile-shell/mosh
