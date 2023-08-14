@@ -68,5 +68,5 @@
 
   post_tasks:
     - name: Suggest login/logout to complete Gnome configuration
-      ansible.builtin.debug:
-        msg: Please logout/login to complete Gnome configuration.
+      shell: |
+         echo 'Please logout/login to complete Gnome configuration.' | lolcat
