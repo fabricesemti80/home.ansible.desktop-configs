@@ -35,6 +35,12 @@ case :$PATH: in
 	*) PATH=/home/$USER/bin:$PATH ;;
 esac
 
+# Add /usr/games to $PATH
+case :$PATH: in
+	*:/usr/games:*) ;;
+	*) PATH=/usr/games:$PATH ;;
+esac
+
 # Add /home/$USER/.local/bin to $PATH
 case :$PATH: in
 	*:/home/$USER/.local/bin:*) ;;
