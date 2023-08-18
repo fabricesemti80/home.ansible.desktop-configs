@@ -70,7 +70,7 @@
 
     - name: Task status
       ansible.builtin.debug:
-        msg: "The task status is: {{  task_failed }}"
+        msg: task_failed
 
     - name: Suggest login/logout to complete Gnome configuration
       ansible.builtin.debug:
