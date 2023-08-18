@@ -2,3 +2,5 @@ fabrice_passwd: $6$h4qEbaJ/sOVPtk3S$cR.7zGSpMhH0ZCsMjAkGo7H81.GamDxw8zqwEh0VL597
 swappiness_value: 5
 
 # echo -n "<password>" | openssl passwd -6 -stdin
+
+healthcheck_uuid: aa86dae1-2f93-4fc0-abb0-4f39e6da1e43
