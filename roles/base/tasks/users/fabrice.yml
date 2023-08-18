@@ -161,67 +161,67 @@
     - { src: "setopt.zsh" }
     - { src: "theming.zsh" }
 
-# - name: users | fabrice | copy vim ftype files  #TODO: might be needed -VIM
-#   tags: dotfiles,fabrice,users,vim
-#   copy:
-#     src: users/fabrice/vim/{{ item.src }}
-#     dest: /home/fabrice/.vim/ftplugin/{{ item.src }}
-#     owner: fabrice
-#     group: fabrice
-#     mode: 0600
-#   with_items:
-#     - { src: 'cmake.vim' }
-#     - { src: 'cpp.vim' }
-#     - { src: 'html.vim' }
-#     - { src: 'perl.vim' }
-#     - { src: 'python.vim' }
-#     - { src: 'ruby.vim' }
-#     - { src: 'sql.vim' }
-#     - { src: 'xml.vim' }
+- name: users | fabrice | copy vim ftype files  #TODO: might be needed -VIM
+  tags: dotfiles,fabrice,users,vim
+  copy:
+    src: users/fabrice/vim/{{ item.src }}
+    dest: /home/fabrice/.vim/ftplugin/{{ item.src }}
+    owner: fabrice
+    group: fabrice
+    mode: 0600
+  with_items:
+    - { src: 'cmake.vim' }
+    - { src: 'cpp.vim' }
+    - { src: 'html.vim' }
+    - { src: 'perl.vim' }
+    - { src: 'python.vim' }
+    - { src: 'ruby.vim' }
+    - { src: 'sql.vim' }
+    - { src: 'xml.vim' }
 
-# - name: users | fabrice | copy vim color files  #TODO: might be needed -VIM
-#   tags: dotfiles,fabrice,users,vim
-#   copy:
-#     src: users/fabrice/vim/{{ item.src }}
-#     dest: /home/fabrice/.vim/colors/{{ item.src }}
-#     owner: fabrice
-#     group: fabrice
-#     mode: 0600
-#   with_items:
-#     - { src: 'bubblegum-256-dark.vim' }
-#     - { src: 'darktango.vim' }
-#     - { src: 'jellybeans.vim' }
-#     - { src: 'xoria256.vim' }
-#     - { src: 'zenburn.vim' }
+- name: users | fabrice | copy vim color files  #TODO: might be needed -VIM
+  tags: dotfiles,fabrice,users,vim
+  copy:
+    src: users/fabrice/vim/{{ item.src }}
+    dest: /home/fabrice/.vim/colors/{{ item.src }}
+    owner: fabrice
+    group: fabrice
+    mode: 0600
+  with_items:
+    - { src: 'bubblegum-256-dark.vim' }
+    - { src: 'darktango.vim' }
+    - { src: 'jellybeans.vim' }
+    - { src: 'xoria256.vim' }
+    - { src: 'zenburn.vim' }
 
-# - name: users | fabrice | install pathogen  #TODO: might be needed -VIM
-#   tags: dotfiles,fabrice,users,vim
-#   copy:
-#     src: users/fabrice/vim/{{ item.src }}
-#     dest: "{{ item.dest }}"
-#     owner: fabrice
-#     group: fabrice
-#     mode: 0700
-#   with_items:
-#     - { src: 'pathogen.vim', dest: '/home/fabrice/.vim/autoload/pathogen.vim' }
+- name: users | fabrice | install pathogen  #TODO: might be needed -VIM
+  tags: dotfiles,fabrice,users,vim
+  copy:
+    src: users/fabrice/vim/{{ item.src }}
+    dest: "{{ item.dest }}"
+    owner: fabrice
+    group: fabrice
+    mode: 0700
+  with_items:
+    - { src: 'pathogen.vim', dest: '/home/fabrice/.vim/autoload/pathogen.vim' }
 
-# - name: users | fabrice | checkout git repositories #TODO: might be needed -VIM
-#   tags: git,users,fabrice
-#   become: yes
-#   git:
-#     repo: "{{ item.repo }}"
-#     dest: "{{ item.dest }}"
-#     force: yes
-#   with_items:
-#     - { repo: 'https://github.com/ctrlpvim/ctrlp.vim.git', dest: '/home/fabrice/.vim/bundle/ctrlp.vim' }
-#     - { repo: 'https://github.com/davidhalter/jedi-vim.git', dest: '/home/fabrice/.vim/bundle/jedi-vim' }
-#     - { repo: 'https://github.com/pearofducks/ansible-vim', dest: '/home/fabrice/.vim/bundle/ansible-vim' }
-#     - { repo: 'https://github.com/rhysd/vim-grammarous.git', dest: '/home/fabrice/.vim/bundle/vim-grammarous' }
-#     - { repo: 'https://github.com/ron89/thesaurus_query.vim', dest: '/home/fabrice/.vim/bundle/thesaurus_query' }
-#     - { repo: 'https://github.com/scrooloose/nerdtree.git', dest: '/home/fabrice/.vim/bundle/nerdtree' }
-#     - { repo: 'https://github.com/tpope/vim-obsession.git', dest: '/home/fabrice/.vim/bundle/vim-obsession' }
-#     - { repo: 'https://github.com/vim-syntastic/syntastic.git', dest: '/home/fabrice/.vim/bundle/syntastic' }
-#   notify: update_vim_bundle_perms
+- name: users | fabrice | checkout git repositories #TODO: might be needed -VIM
+  tags: git,users,fabrice
+  become: yes
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    force: yes
+  with_items:
+    - { repo: 'https://github.com/ctrlpvim/ctrlp.vim.git', dest: '/home/fabrice/.vim/bundle/ctrlp.vim' }
+    - { repo: 'https://github.com/davidhalter/jedi-vim.git', dest: '/home/fabrice/.vim/bundle/jedi-vim' }
+    - { repo: 'https://github.com/pearofducks/ansible-vim', dest: '/home/fabrice/.vim/bundle/ansible-vim' }
+    - { repo: 'https://github.com/rhysd/vim-grammarous.git', dest: '/home/fabrice/.vim/bundle/vim-grammarous' }
+    - { repo: 'https://github.com/ron89/thesaurus_query.vim', dest: '/home/fabrice/.vim/bundle/thesaurus_query' }
+    - { repo: 'https://github.com/scrooloose/nerdtree.git', dest: '/home/fabrice/.vim/bundle/nerdtree' }
+    - { repo: 'https://github.com/tpope/vim-obsession.git', dest: '/home/fabrice/.vim/bundle/vim-obsession' }
+    - { repo: 'https://github.com/vim-syntastic/syntastic.git', dest: '/home/fabrice/.vim/bundle/syntastic' }
+  notify: update_vim_bundle_perms
 
 - name: users | fabrice | download fonts
   tags: fonts,fabrice,users,nerdfonts

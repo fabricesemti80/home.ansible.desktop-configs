@@ -29,11 +29,11 @@
   roles:
     - workstation
 
-# - hosts: server
-#   tags: server
-#   become: true
-#   roles:
-#     - server
+- hosts: server
+  tags: server
+  become: true
+  roles:
+    - server
 
 # end of run cleanup and reporting
 - hosts: all
