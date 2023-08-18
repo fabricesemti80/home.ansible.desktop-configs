@@ -1,4 +1,4 @@
-# - block:
+- block:
 #   - name: send failure notification via telegram
 #     tags: always
 #     telegram:
@@ -22,9 +22,9 @@
 #           The specific error couldn't be shown, check the log."
 #       changed_when: False
 
-# - name: ansible job failed, clear cache later on to trigger another provision run
-#   become: yes
-#   at:
-#     command: "if ! pgrep -f ansible-pull >/dev/null; then rm -rf /home/simone/.ansible; fi"
-#     count: 60
-#     units: minutes
+- name: ansible job failed, clear cache later on to trigger another provision run
+  become: true
+  at:
+    command: "if ! pgrep -f ansible-pull >/dev/null; then rm -rf /home/fabrice/.ansible; fi"
+    count: 60
+    units: minutes
