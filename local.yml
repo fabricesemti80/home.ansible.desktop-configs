@@ -68,10 +68,6 @@
 
   post_tasks:
 
-    - name: Task status
-      ansible.builtin.debug:
-        msg: task_failed
-
     - name: Suggest login/logout to complete Gnome configuration
       ansible.builtin.debug:
         msg: 'Please logout& login to complete the configuration.'
