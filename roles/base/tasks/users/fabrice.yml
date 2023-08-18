@@ -59,11 +59,11 @@
     - { dir: ".tmux" }
     - { dir: ".tmux/config" }
     - { dir: ".tmux/plugins" }
-    # - { dir: '.vim' }
-    # - { dir: '.vim/autoload' }
-    # - { dir: '.vim/bundle' }
-    # - { dir: '.vim/colors' }
-    # - { dir: '.vim/ftplugin' }
+    - { dir: '.vim' }
+    - { dir: '.vim/autoload' }
+    - { dir: '.vim/bundle' }
+    - { dir: '.vim/colors' }
+    - { dir: '.vim/ftplugin' }
     - { dir: ".zsh" }
     - { dir: ".fonts" }
 
