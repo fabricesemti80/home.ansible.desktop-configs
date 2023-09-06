@@ -19,9 +19,9 @@
       when: ansible_distribution in ["Debian", "Ubuntu"]
 
     - name: pre-run | update package cache (fedora)
-      tags: always
-      dnf:
-        update_cache: yes
+     dnf:
+        name: "*"
+        state: latest
       changed_when: False
       when: ansible_os_family == "RedHat"
       
