@@ -8,7 +8,7 @@
       tags: always
       pacman: update_cache=yes
       changed_when: False
-      when: ansible_distribution == "Archlinux"
+      when: ansible_distribution in ["Archlinux"]
 
     - name: pre-run | update package cache (debian, etc)
       tags: always
@@ -21,7 +21,7 @@
       dnf:
         update_cache: yes
       changed_when: False
-      when: ansible_distribution == "Fedora"
+      when: ansible_distribution in ["Fedora"]
       
 # run roles
 - hosts: all
