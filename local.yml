@@ -6,19 +6,19 @@
   become_method: sudo
   pre_tasks:
     - name: pre-run | update package cache (arch)
-      #tags: always
+      tags: always
       pacman: update_cache=yes
       changed_when: False
       when: ansible_distribution == "Archlinux" and ansible_os_family != "RedHat"
 
     - name: pre-run | update package cache (debian, etc)
-      #tags: always
+      tags: always
       apt: update_cache=yes
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu"]
 
     - name: pre-run | update package cache (fedora)
-      #tags: always
+      tags: always
       dnf:
         update_cache: yes
       when: ansible_os_family == "RedHat" and ansible_distribution == "Fedora"
