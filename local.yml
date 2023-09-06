@@ -18,8 +18,7 @@
 
     - name: pre-run | update package cache (fedora)
       tags: always
-      dnf:
-        update_cache: yes
+      dnf: update_cache: yes
       changed_when: False
       when: ansible_distribution in ["Fedora"]
       
