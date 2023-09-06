@@ -1,0 +1,50 @@
+---
+branch: fabrice
+
+ansible_cron_minute: "*/5"
+ssh_port: 22
+ssh_users: "fabrice"
+
+# platform-specific
+ansible_python_interpreter: /usr/bin/python3
+microcode_amd_install: false
+microcode_intel_install: true
+
+# app defaults
+gui_editor: gvim
+terminal_emulator: terminator
+web_browser: flatpak run org.mozilla.firefox
+
+# application selection
+audacity: false       #todo: remove residuals
+authy: true
+autofs: false         #todo: remove residuals
+chromium: false       #todo: remove residuals
+darktable: false      #todo: remove residuals
+firefox: true
+foliate: true
+games: false          #todo: remove residuals
+glimpse: true
+keepassxc: false      #todo: remove residuals
+libreoffice: false    #todo: remove residuals
+lutris: false         #todo: remove residuals
+mattermost: false     #todo: remove residuals
+minecraft: false      #todo: remove residuals
+packer: true
+signal: false         #todo: remove residuals
+spotify: false        #! review
+steam: false          #! review
+syncthing: true
+terraform: true
+thunderbird: true
+todoist: false        #todo: remove residuals
+ulauncher: false      # https://ulauncher.io/
+vagrant: true
+virtualbox: true
+vivaldi: false        #todo: remove residuals
+vlc: true
+xonotic: false        #todo: remove residuals
+
+# desktop environment selection
+gnome: true
+mate: false
